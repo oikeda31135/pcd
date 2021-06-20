@@ -1,0 +1,27 @@
+q1. A
+q2. C -> B Stackdriverエージェントとは?
+q3. C → A CloudSQL proxyをつかうということですね。（外部アクセスはよくない）
+q4. C
+q5. A
+q6. C
+q7. B
+q8. C
+q9. B
+q10. C, E → A, C
+q11. D → C
+q12. B
+q13. B → A
+q14. D → C resolv.conf からとるということか。
+q15. A → B
+q16. A
+q17. C
+q18. A
+q19. C → B
+q20. C
+q21. B → A
+q22. C → D
+q23. D → C
+q24. C → B
+q25.
+
+

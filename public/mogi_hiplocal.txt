@@ -1,0 +1,127 @@
+HipLocal is a community application designed to facilitate communication between
+people in close proximity.
+It is used for event planning and organizing sporting events,
+and for businesses to connect with their local communities.
+HipLocal launched recently in a few neighborhoods in Dallas and is rapidly growing into a global phenomenon.
+Its unique style of hyper-local community communication and business outreach is in
+demand around the world
+
+HipLocalは、近くにいる人々の間のコミュニケーションを容易にするように設計されたコミュニティアプリケーションです。
+イベントの計画やスポーツイベントの開催や、企業が地元のコミュニティとつながるために使用されます。
+HipLocalは最近ダラスのいくつかの地域でローンチし、急速に世界的な現象に成長しています。
+ハイパーローカルコミュニティコミュニケーションとビジネスアウトリーチのユニークなスタイルは世界中で需要があります。
+
+Executive statement
+エグゼクティブステートメント
+
+We are the number one local community app; it’s time to take our local community
+services global. Our venture capital investors want to see rapid growth and the same
+great experience for new local and virtual communities that come online, whether their
+members are 10 or 10,000 miles away from each other.
+
+私たちはナンバーワンのローカルコミュニティアプリです。
+地元のコミュニティサービスをグローバルに展開する時が来ました。
+私たちのベンチャーキャピタル投資家は、急速な成長と同時にオンライン上での新たなローカル仮想コミュニティの為の大きな経験を見たいと思っています。
+そのコミュニティーのメンバーは互いに10マイルまたは10,000マイル離れているかもしれません。
+
+Solution concept
+ソリューションの概念
+
+HipLocal wants to expand their existing service with updated functionality in new
+locations to better serve their global customers.
+They want to hire and train a new team to support these locations in their time zones.
+They will need to ensure that the application scales smoothly and provides clear uptime data, and that they analyze and
+respond to any issues that occur.
+
+HipLocalは、新たな場所で、世界中のお客様により良いサービスを提供する為に機能を更新し、既存のサービスを拡張したいと考えています。
+
+彼らは新しいチームを雇って訓練したい。
+それぞれのタイムゾーンでこれらの場所をサポートする為に。
+彼らは次のことを確認する必要があります
+アプリケーションがスムーズにスケーリングし、明確な稼働時間データを提供し、分析して
+発生した問題に対応する事を。
+
+Existing technical environment
+既存の技術環境
+
+HipLocal's environment is a mixture of on-premises hardware and infrastructure running in Google Cloud.
+The HipLocal team understands their application well, but has limited experience in globally scaled applications.
+Their existing technical environment is as follows:
+
+HipLocalの環境は、オンプレミスのハードウェアとGoogleCloud上で稼働するインフラストラクチャが混在しています。
+HipLocalチームはアプリケーションをよく理解していますが、グローバルに拡張されたアプリケーションの経験がありません。
+彼らの既存の技術環境は次のとおりです。
+
+・Existing APIs run on Compute Engine virtual machine instances hosted in Google Cloud.
+  既存のAPIは、GoogleCloudでホストされているComputeEngine仮想マシンインスタンスで実行されます。
+  
+・State is stored in a single instance MySQL database in Google Cloud.
+  状態は、Google Cloud上のMySQL単一インスタンスに保存されます.
+
+・Release cycles include development freezes to allow for QA testing.
+  リリースサイクルにはQA（品質）テストの為にデプロイメントが停止する事を含めています.
+
+・The application has no consistent logging.
+  アプリケーションには一貫したログがありません。
+  
+・Applications are manually deployed by infrastructure engineers during periods of slow traffic on weekday evenings.
+  アプリケーションは、平日の夜のトラフィックが遅い時間帯にインフラストラクチャエンジニアによって手動で展開されます。
+
+・There are basic indicators of uptime; alerts are frequently fired when the APIs are unresponsive.
+  稼働時間の基本的な指標があります。 APIが応答しない場合、アラートが頻繁に発生します。
+
+
+Business requirements
+ビジネス要件
+
+HipLocal's investors want to expand their footprint and support the increase in demand
+they are experiencing. Their requirements are:
+
+HipLocalの投資家は、フットプリントを拡大し、需要の増加をサポートしたいと考えています
+彼らは経験しています。それらの要件は次のとおりです。
+
+・Expand availability of the application to new locations.
+  アプリケーションの可用性を新しい場所に拡張します。
+
+・Support 10x as many concurrent users.
+  10倍の同時ユーザーをサポートします。
+
+・Ensure a consistent experience for users when they travel to different locations.
+  ユーザーがさまざまな場所に旅行するときに、一貫したエクスペリエンスを確保します。
+
+・Obtain user activity metrics to better understand how to monetize their product.
+  製品を収益化する方法をよりよく理解するために、ユーザーアクティビティメトリックを取得します。
+
+・Ensure compliance with regulations in the new regions (for example, GDPR).
+  新しい地域の規制（GDPRなど）への準拠を確認します。
+
+・Reduce infrastructure management time and cost.
+  インフラストラクチャ管理の時間とコストを削減します。
+
+・Adopt the Google-recommended practices for cloud computing:
+  クラウドコンピューティングにGoogleが推奨する手法を採用します。
+  a. Develop standardized workflows and processes around application lifecycle management.
+     アプリケーションライフサイクル管理に関する標準化されたワークフローとプロセスを開発します。
+  b. Define service level indicators (SLIs) and service level objectives (SLOs).
+     サービスレベルインジケーター（SLI）とサービスレベル目標（SLO）を定義します。
+
+
+Technical requirements
+技術要件
+・Provide secure communications between the on-premises data center and cloudhosted applications and infrastructure.
+  オンプレミスのデータセンターとクラウドでホストされているアプリケーションおよびインフラストラクチャ間の安全な通信を提供します。
+
+・The application must provide usage metrics and monitoring.
+  アプリケーションは、使用状況のメトリックと監視を提供する必要があります。
+
+・APIs require authentication and authorization.
+  APIには認証と承認が必要です。
+
+・Implement faster and more accurate validation of new features.
+  新機能のより高速で正確な検証を実装します。
+
+・Logging and performance metrics must provide actionable information to be able to provide debugging information and alerts.
+  ロギングおよびパフォーマンスメトリックは、デバッグ情報とアラートを提供できるようにするための実用的な情報を提供する必要があります。
+
+・Must scale to meet user demand
+  ユーザーの需要を満たすために拡張する必要があります
