@@ -1,3 +1,5 @@
+https://www.cloudsmog.net/practice-exams/google-cloud-platform/ja_professional-cloud-developer_20210404/
+
 Question 1
 データ移行の一環として、オンプレミスの仮想マシンから Google Cloud Storage にファイルをアップロードを検討しています。
 これらのファイルはGCP 環境の Google Cloud Dataproc Hadoop クラスタで利用されます。
