@@ -1,45 +1,37 @@
-HipLocal is a community application designed to facilitate communication between
-people in close proximity.
+HipLocal is a community application designed to facilitate communication betweenpeople in close proximity.
 It is used for event planning and organizing sporting events,
 and for businesses to connect with their local communities.
 HipLocal launched recently in a few neighborhoods in Dallas and is rapidly growing into a global phenomenon.
-Its unique style of hyper-local community communication and business outreach is in
-demand around the world
+Its unique style of hyper-local community communication and business outreach is in demand around the world
 
-HipLocalは、近くにいる人々の間のコミュニケーションを容易にするように設計されたコミュニティアプリケーションです。
-イベントの計画やスポーツイベントの開催や、企業が地元のコミュニティとつながるために使用されます。
-HipLocalは最近ダラスのいくつかの地域でローンチし、急速に世界的な現象に成長しています。
-ハイパーローカルコミュニティコミュニケーションとビジネスアウトリーチのユニークなスタイルは世界中で需要があります。
+HipLocalは、近くにいる人々の間のコミュニケーションを促進するように設計されたコミュニティアプリケーションです。
+イベントの計画やスポーツイベントの開催に使用されます。
+そして企業が地元のコミュニティとつながるために。
+HipLocalは最近、ダラスのいくつかの地域で立ち上げられ、急速に世界的な現象に成長しています。
+そのユニークなスタイルのハイパーローカルコミュニティコミュニケーションとビジネスアウトリーチは世界中で求められています.
+
 
 Executive statement
 エグゼクティブステートメント
 
-We are the number one local community app; it’s time to take our local community
-services global. Our venture capital investors want to see rapid growth and the same
-great experience for new local and virtual communities that come online, whether their
-members are 10 or 10,000 miles away from each other.
+We are the number one local community app; it’s time to take our local community services global.
+Our venture capital investors want to see rapid growth and the same great experience for new local and virtual communities that come online, whether their members are 10 or 10,000 miles away from each other.
 
-私たちはナンバーワンのローカルコミュニティアプリです。
-地元のコミュニティサービスをグローバルに展開する時が来ました。
-私たちのベンチャーキャピタル投資家は、急速な成長と同時にオンライン上での新たなローカル仮想コミュニティの為の大きな経験を見たいと思っています。
-そのコミュニティーのメンバーは互いに10マイルまたは10,000マイル離れているかもしれません。
+私たちはナンバーワンのローカルコミュニティアプリです。地域社会サービスをグローバルに展開する時が来ました。
+私たちのベンチャーキャピタル投資家は、メンバーが互いに10マイルまたは10,000マイル離れているかどうかに関係なく、オンラインになる新しいローカルコミュニティと仮想コミュニティの急速な成長と同じ素晴らしい体験を望んでいます。
+
 
 Solution concept
 ソリューションの概念
 
-HipLocal wants to expand their existing service with updated functionality in new
-locations to better serve their global customers.
+HipLocal wants to expand their existing service with updated functionality in new locations to better serve their global customers.
 They want to hire and train a new team to support these locations in their time zones.
-They will need to ensure that the application scales smoothly and provides clear uptime data, and that they analyze and
-respond to any issues that occur.
+They will need to ensure that the application scales smoothly and provides clear uptime data, and that they analyze and respond to any issues that occur.
 
-HipLocalは、新たな場所で、世界中のお客様により良いサービスを提供する為に機能を更新し、既存のサービスを拡張したいと考えています。
+HipLocalは、グローバルな顧客により良いサービスを提供するために、新しい場所で更新された機能を使用して既存のサービスを拡張したいと考えています。
+彼らは、タイムゾーンでこれらの場所をサポートするために新しいチームを雇って訓練したいと考えています。
+彼らは、アプリケーションがスムーズにスケーリングし、明確な稼働時間データを提供し、発生した問題を分析して対応することを保証する必要があります。
 
-彼らは新しいチームを雇って訓練したい。
-それぞれのタイムゾーンでこれらの場所をサポートする為に。
-彼らは次のことを確認する必要があります
-アプリケーションがスムーズにスケーリングし、明確な稼働時間データを提供し、分析して
-発生した問題に対応する事を。
 
 Existing technical environment
 既存の技術環境
@@ -74,11 +66,11 @@ HipLocalチームはアプリケーションをよく理解していますが、
 Business requirements
 ビジネス要件
 
-HipLocal's investors want to expand their footprint and support the increase in demand
-they are experiencing. Their requirements are:
+HipLocal's investors want to expand their footprint and support the increase in demand they are experiencing.
+Their requirements are:
 
-HipLocalの投資家は、フットプリントを拡大し、需要の増加をサポートしたいと考えています
-彼らは経験しています。それらの要件は次のとおりです。
+HipLocalの投資家は、フットプリントを拡大し、経験している需要の増加をサポートしたいと考えています。
+それらの要件は次のとおりです。
 
 ・Expand availability of the application to new locations.
   アプリケーションの可用性を新しい場所に拡張します。

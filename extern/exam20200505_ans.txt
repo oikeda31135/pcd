@@ -1,0 +1,467 @@
+Google Cloud 認定資格 -Professional Cloud Developer（全33問）
+答えの間違いが多い。全部20210404にあるのでそちらをみる。
+
+From GratisExam’s v2020-05-05.by.david.33q
+
+QUESTION 1
+データ移行の一環として、オンプレミスの仮想マシンからGoogle Cloud Storage にファイルをアップロードを行います。これらのファイルは、Google Cloud Platform 環境のGoogle Cloud DataProc Hadoop クラスタによって使用されます。
+どのコマンドを使用しますか？
+
+A. gsutil cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/
+B. gcloud cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/
+C. hadoop fs cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/
+D. gcloud dataproc cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/
+
+Correct Answer: A
+
+Explanation:
+gsutil cp コマンドを使うと、「gsutil config」 を実行して生成されたローカルファイル、ストレージ、boto ファイル間でデータをコピーすることができます。
+
+QUESTION 2
+次のgcloud コマンドを使用してHTTP(s) Load Balancer をデプロイしました。
+
+export NAME-load-balancer
+
+# create network
+gcloud compute networks create ${NAME}
+
+# add instance gcloud compute instances create ${NAME) -backend-instance-1 --subnet $ (NAME) --no address
+
+# create the instance group
+gcloud compute instance-groups unmanaged create $ (NAME) -i
+gcloud compute instance-groups unmanaged set-named-ports ${NAME}-i --named-ports http:80
+gcloud compute instance-groups unmanaged add-instances $ (NAME) -i --instances $ (NAME)-instance-1
+
+# configure health checks
+gcloud compute health-checks create http $ (NAME) -http-hc --port 80
+
+# create backend service
+gcloud compute backend-services create $ (NAME) -http-bes --health-checks ${NAME} -http-hc --protocol HTTP --port-name http --global
+gcloud compute backend-services add-backend ${NAME} -http-bes --instance-group ${NAME} -i --balancing-mode RATE --max-rate 100000 --capacity-scaler 1.0 --global --instance-group-zone us-easti-d
+
+# create urls maps and forwarding rule
+gcloud compute url-maps create $ (NAME) -http-urlmap--default-service $ (NAME) -http-bes
+gcloud compute target-http-proxies create ${NAME) -http-proxy --url-map ${NAME} -http-urlmap
+gcloud compute forwarding-rules create $ (NAME) -http-fw --global --ip-protocol ICP--target-http-proxy $ (NAME) -http-proxy --ports 80
+Google Compute Engine 仮想マシンインスタンス上のポート 80へのヘルスチェックが失敗しており、インスタンスにトラフィックが送信されません。
+あなたはこの問題を解決したいと思います。
+どのコマンドを実行しますか？
+
+A. gcloud compute instances add-access-config ${NAME}-backend-instance-1
+B. gcloud compute instances add-tags ${NAME}-backend-instance-1 ?tags http-server
+C. gcloud compute firewall-rules create allow-lb ?network load-balancer ?allow tcp ?source-ranges
+130.211.0.0/22,35.191.0.0/16 ?direction INGRESS
+D. gcloud compute firewall-rules create allow-lb ?network load-balancer ?allow tcp ?destination-ranges
+130.211.0.0/22,35.191.0.0/16 ?direction EGRESS
+Correct Answer: C
+
+Reference
+? ネットワーキング用に VM を構成したユースケース
+
+QUESTION 3
+ローカル環境からGoogle Compute Engine 仮想マシン インスタンスにlocal-scripts ディレクトリとそのすべてのコンテンツをコピーする必要があります。
+どのコマンドを使用しますか?
+
+A. gsutil cp ?project “my-gcp-project” -r ~/local-scripts/ gcp-instance-name:~/server-scripts/ ?zone “us-east1-b”
+B. gsutil cp ?project “my-gcp-project” -R ~/local-scripts/ gcp-instance-name:~/server-scripts/ ?zone “us-east1-b”
+C. gcloud compute scp ?project “my-gcp-project” ?recurse ~/local-scripts/ gcp-instance-name:~/server-scripts/ ?zone
+“us-east1-b”
+D. gcloud compute mv ?project “my-gcp-project” ?recurse ~/local-scripts/ gcp-instance-name:~/server-scripts/ ?zone
+“us-east1-b”
+
+Correct Answer: C
+
+Reference:
+? gcloud compute copy-files
+
+QUESTION 4
+Google Stackdriver Monitoring Agent がインストールされたGoogle Compute Engine 仮想マシン インスタンスにアプリケーションをデプロイしています。アプリケーションはインスタンス上のunix プロセスです。
+unix プロセスが少なくとも 5 分間実行されていない場合にアラートを表示しますが、メトリックまたはログを生成するようにアプリケーションを変更することはできません。
+どのアラート条件を構成する必要がありますか？
+
+A. Uptime check
+B. Process health
+C. Metric absence
+D. Metric threshold
+Correct Answer: B
+
+Reference:
+? アラートの動作
+
+QUESTION 5
+ANSI-SQL に準拠したデータベース内に2つのテーブルがあり、同じ列を持つテーブルを1つのテーブルに素早く結合し、結果セットから重複した行を削除する必要があります。
+どうすればよいでしょうか？
+
+A. SQL でJOIN クエリを使用してテーブルを結合します。
+B. テーブルを結合するには、入れ子になったWITH ステートメントを使用します。
+C. SQL でUNION クエリを使用してテーブルを結合します。
+D. SQL でUNION ALL 演算子を使用してテーブルを結合します。
+Correct Answer: C
+
+Reference:
+? SQL: UNION ALL Operator
+
+QUESTION 6
+本番環境にアプリケーションがデプロイされているとします。新しいバージョンがデプロイされると、アプリケーションが本番環境のユーザーからトラフィックを受け取るまで、いくつかの問題が発生しません。
+影響を受けるユーザー数と影響を受けるユーザー数の両方を減らしたいと考えています。
+どのデプロイ戦略を使用しますか?
+
+A. ブルー/グリーン（Blue/green）デプロイメント
+B. カナリア（Canary）デプロイメント
+C. ローリング（Rolling）デプロイメント
+D. 再作成（Recreate） deployment
+Correct Answer: A
+
+Reference:
+? Six Strategies for Application Deployment
+
+QUESTION 7
+チームメイトは、以下のコードを確認するように依頼しています。
+このコードの目的は、Google BigQuery テーブルに多数の小さな行を効率的に追加することです。
+
+BigQuery service = BigQueryOptions.newBuilder().build().getService();
+
+  public void writeToBigQuery(Collection<Map<String, String>> rows){
+    for(Map<String, String> row : rows) {
+      InsertAllRequest insertRequest = InsertAllRequest.newBuilder(
+        "datasetId", "tableID",
+        InsertAllRequest.RowToInsert.of(row)).build();
+      service.insertAll(insertRequset);
+  }
+}
+チームメイトにどのような改善を提案しますか？
+
+A. 各リクエストに複数の行を含めます。
+B. 複数のスレッドを作成して並列に挿入を実行します。
+C. 各行をGoogle Cloud Storage オブジェクトに書き込み、Google BigQuery にロードします。
+D. 各行をGoogle Cloud Storage オブジェクトに並列に書き込んでから、Google BigQuery にロードします。
+Correct Answer: B
+
+QUESTION 8
+アプリケーションをGoogle Compute Engine 仮想マシン インスタンスにデプロイしています。
+アプリケーションは、ログ ファイルをディスクに書き込むように設定されています。アプリケーションのコードを変更せずに Google Stackdriver Logging でログを表示したいと思っています。
+どうすればよいでしょうか？
+
+A. Google Stackdriver Logging Agent をインストールし、アプリケーションのログを送信するように設定します。
+B. Google Stackdriver Logging ライブラリを使用して、アプリケーションから Google Stackdriver Logging に直接ログを記録します。
+C. インスタンスのメタデータにログ ファイル フォルダ パスを指定して、アプリケーション ログを送信するように構成します。
+D. アプリケーションのログが自動的に Google Stackdriver Logging に送信されるように、アプリケーションのログを /var/log に変更します。
+Correct Answer: A
+
+QUESTION 9
+お使いのサービスでは、Google Cloud Storage から読み取った画像にテキストが追加されます。
+1年の忙しい時期に、Google Cloud StorageへのリクエストがHTTP 429「Too Many Requests」ステータスコードで失敗します。
+このエラーはどのように対処すればよいでしょうか？
+
+A. オブジェクトにキャッシュ制御ヘッダーを追加します。
+B. GCP Console から割り当ての増加をリクエストする。
+C. 切り捨て指数バックオフ戦略を使用してリクエストを再試行します。
+D. Google Cloud Storage バケットのストレージ クラスをMulti-regionalに変更します。
+Correct Answer: C
+
+Reference:
+? Usage Limits
+
+QUESTION 10
+AndroidやiOS アプリで使用されるAPIを構築している場合、APIは必須です。
+・HTTPをサポートしていること
+・帯域幅コストの最小化
+・モバイル アプリと簡単に統合
+どのAPIアーキテクチャを使うべきか？
+
+A. RESTful APIs
+B. MQTT for APIs
+C. gRPC-based APIs
+D. SOAP-based APIs 
+Correct Answer: A
+
+Reference:
+? How to Build RESTful API for Your Mobile App? 
+
+QUESTION 11
+アプリケーションはユーザーからの入力を受け取り、それをユーザーの連絡先に公開します。この入力はGoogle Cloud Spanner のテーブルに保存されます。このアプリケーションはレイテンシの影響を受けやすく、一貫性の影響を受けにくくなっています。
+このアプリケーションでは、Google Cloud Spannerからの読み取りをどのように実行すればよいでしょうか？
+
+A. 読み取り専用のトランザクションを実行します。
+B. シングル リード方式を使用してステイル読み取りを実行する。
+C. シングル リード方式を使用して強力な読み取りを実行します。
+D. 読み書きトランザクションを使用してステイル読み取りを実行します。
+Correct Answer: D
+
+Reference:
+? ゲーム データベースとして Cloud Spanner を使用する場合のベスト プラクティス
+? 読み取り
+
+QUESTION 12
+簡単なHTML アプリケーションをインターネット上で公開する予定です。
+このサイトでは、アプリケーションのFAQに関する情報を保持しています。このアプリケーションは静的なもので、画像、HTML、CSS、Javascript が含まれています。
+このアプリケーションをできるだけ少ない手順でインターネット上で利用できるようにしたいと考えています。
+どうすればいいのでしょうか？
+
+A. Google Cloud Storage にアプリケーションをアップロードします。
+B. Google App Engine 環境にアプリケーションをアップロードします。
+C. Apache Web サーバーがインストールされた Google Compute Engine インスタンスを作成します。アプリケーションをホストするためにApache Web サーバーを設定します。
+D. 最初にアプリケーションをコンテナ化します。このコンテナをGoogle Kubernetes Engine（GKE）にデプロイし、アプリケーションをホストするGKEポッドに外部IPアドレスを割り当てます。
+Correct Answer: A
+
+Reference:
+? 静的ウェブサイトのホスティング
+
+QUESTION 13
+開発期間を最小限に抑えつつ、本番でのサービス低下をオンコール エンジニアに通知したいと考えています。
+どうすればいいのでしょうか？
+
+A. Google Cloud Function を使用してリソースを監視し、アラートを生成します。
+B. Google Cloud Pub / Sub を使用してリソースを監視し、アラートを生成する。
+C. Google Stackdriver Error Reporting を使用してエラーをキャプチャし、アラートを生成する。
+D. Google Stackdriver Monitoring を使用してリソースを監視し、アラートを生成する。
+Correct Answer: A
+
+?
+
+QUESTION 14
+XMLHttpRequest（XHR）を使用してコンテンツのためにサードパーティのAPIと通信するユーザーインターフェースを持つシングルページのWebアプリケーションを書いています。
+APIの結果によってUIに表示されるデータは、同じWebページに表示される他のデータよりも重要度が低いため、APIのデータがUIに表示されないリクエストがあっても構いません。しかし、APIへの呼び出しがユーザーインターフェースの他の部分のレンダリングを遅らせるべきではありません。
+API レスポンスがエラーやタイムアウトの場合に、アプリケーションが正常に動作するようにしたいと思います。
+どうすればいいのでしょうか？
+
+A. APIへのリクエストの非同期オプションをfalseに設定し、タイムアウトやエラーが発生した場合にAPIの結果を表示するウィジェットを省略します。
+B. APIへのリクエストの非同期オプションをtrueに設定し、タイムアウトやエラーが発生した場合にAPI結果を表示するウィジェットを省略します。
+C. API コールからタイムアウトやエラーの例外をキャッチし、API レスポンスが成功するまで指数関数的なバックオフで試行し続けます。
+D. API コールからタイムアウトまたはエラー例外をキャッチし、UI ウィジェットにエラー応答を表示します。
+Correct Answer: A
+
+QUESTION 15
+タイムスタンプ、アカウント番号（string）、トランザクション金額（number）の3つの列を含むログファイルを解析しています。
+各ユニークなアカウント番号のすべてのトランザクション金額の合計を効率的に計算したいと思っています。
+どのデータ構造を使用しますか?
+
+A. リンクされたリスト
+B. ハッシュ表
+C. 二次元配列
+D. カンマ区切りの文字列
+Correct Answer: B
+
+QUESTION 16
+会社には、従業員の出張と経費に関する情報を保持する「Master」という名前のGoogle BigQuery データセットがあります。
+この情報は、従業員の部署ごとに整理されています。つまり、従業員は自分の部署の情報のみを表示できるようにする必要があります。
+この要件を最小限の手順で実施するために、セキュリティ フレームワークを適用したいと考えています。
+あなたは何をすべきでしょうか？
+
+A. 各部門ごとに個別のデータセットを作成します。特定の部門の特定のデータセットからレコードを選択するために、適切なWHERE ステートメントを持つビューを作成します。このビューにMaster データセットのレコードにアクセスします。この部門固有のデータセットに対する権限を従業員に付与します。
+B. 部門ごとに個別のデータセットを作成する。各部門のデータパイプラインを作成して、Master データセットから部門の特定のデータセットに適切な情報をコピーします。 この部門固有のデータセットに対する権限を従業員に付与します。
+C. Master データセットという名前のデータセットを作成します。Master データセットの部門ごとに個別のビューを作成します。 従業員が自分の部門の特定のビューにアクセスできるようにします。
+D. Master データセットという名前のデータセットを作成する。Master データセットの部門ごとに個別のテーブルを作成します。 従業員が自分の部門の特定のテーブルにアクセスできるようにします。
+Correct Answer: B
+
+QUESTION 17 
+サーバーアプリケーションの負荷テストを行っています。
+最初の30秒間に、以前は非アクティブだったGoogle Cloud Storage バケットが、毎秒 2,000回の書き込み要求と毎秒 7,500回の読み取りリクエストを処理しています。アプリケーションはリクエストが高まるにつれ、Google Cloud Storage JSON API から断続的に 5xx と 429 HTTP レスポンスを受信しています。
+Google Cloud Storage APIからの失敗したレスポンスを減らしたいと思います。
+どうすればよいでしょうか？
+
+A. アップロードを多数の個別の Google Cloud Storage バケットに分散します。
+B. Google Cloud Storage との連携にJSON APIの代わりにXML APIを使用します。
+C. アプリケーションからアップロードを呼び出しているクライアントにHTTP レスポンス コードを返します。
+D. アプリケーション クライアントからのアップロードレートを制限して、休止バケットのピークリクエスト レートが徐々に到達するようにします。
+Correct Answer: A
+
+Reference:
+? リクエスト レートとアクセス配信のガイドライン
+
+QUESTION 18
+Google Compute Engine 仮想マシン インスタンス上でホストされているHTTP APIを開発していますが、これは同じVirtual Private Cloud（VPC）内の複数のクライアントによって呼び出される必要があります。
+クライアントがサービスのIPアドレスを取得できるようにしたいと考えています。
+どうすればよいでしょうか？
+
+A. 静的な外部 IP アドレスを予約し、HTTP(S) load balancing サービスの転送ルールに割り当てます。クライアントはこのIP アドレスを使用してサービスに接続する必要があります。
+B. 静的な外部 IP アドレスを予約し、HTTP(S) load balancing サービスの転送ルールに割り当てます。次に、Google Cloud DNS で A レコードを定義します。クライアントはこのAレコードの名前を使用してサービスに接続する必要があります。
+C. クライアントは、https://[INSTANCE_NAME].[ZONE].c. [PROJECT_ID].internal/. というURLでインスタンス名に接続することで、Google Compute Engine の内部 DNSを使用することを確認してください。
+D. クライアントは、https://[API_NAME]/[API_VERSION]/. というURLでインスタンス名に接続することで、Google Compute Engineの内部 DNSを使用するようにしてください。
+Correct Answer: D
+
+QUESTION 19
+新しいAPIを構築しています。
+画像を保存するコストを最小限に抑え、画像を提供する際の待ち時間を短縮したいと考えています。
+どのアーキテクチャを使用しますか？
+
+A. Google Cloud Storage にバックアップされたGoogle App Engine。
+B. Persistent Disk にバックアップされたGoogle Compute Engine。
+C. Google Cloud Filestore にバックアップされたTransfer Appliance。
+D. Google Cloud Storage にバックアップされたGoogle Cloud Content Delivery Network（CDN）。
+Correct Answer: B
+
+QUESTION 20
+コードはプロジェクト AのGoogle Cloud Functions 上で実行されています。プロジェクト Bが所有するGoogle Cloud Storage バケットにオブジェクトを書き込むことになっていますが、書き込み呼び出しが “403 Forbidden “というエラーで失敗しています。
+この問題を修正するにはどうすればよいでしょうか？
+
+A. ユーザーアカウントに、Google Cloud Storage バケットの roles/storage.objectCreator ロールを付与します。
+B. ユーザーアカウントに、service-PROJECTA@gcf-admin-robot.iam.gserviceaccount.com サービスアカウントの roles/iam.serviceAccountUser ロールを付与します。
+service-PROJECTA@gcf-admin-robot.iam.gserviceaccount.com サービスアカウントに、Google Cloud Storage バケット用の roles/storage.objectCreator ロールを付与します。
+D. プロジェクト BでGoogle Cloud Storage API を有効にします。
+Correct Answer: B
+
+QUESTION 21 
+この問題については、HipLocal のケーススタディを参照してください。
+HipLocal の API は時々障害が発生しますが、パターンを見つけることができません。トラブルシューティングに役立つメトリクスを収集したいと考えています。
+どうすればいいのでしょうか？
+
+A. すべてのVMのスナップショットを頻繁に作成します。
+B. Google Stackdriver Logging Agent をVMにインストールします。
+C. VM にGoogle Stackdriver Monitoring Agent をインストールします。
+D. Google Stackdriver Trace を使用してパフォーマンスのボトルネックを探します。
+Correct Answer: C
+
+QUESTION 22
+この問題については、HipLocal のケーススタディを参照してください。
+HipLocal は、オンコール エンジニアの数を減らし、手動でのスケーリングをなくしたいと考えています。
+HipLocal はどの 2 つのサービスを選ぶべきでしょうか？（回答は2つ）
+
+A. Google App Engine を利用する。
+B. サーバーレスのGoogle Cloud Functions を利用する。
+C. Knative を使用してサーバーレス アプリケーションを構築して展開する。
+D. 自動デプロイにGoogle Kubernetes Engine を使用する。
+E. デプロイに大規模なGoogle Compute Engine クラスタを使用する。
+Correct Answer: B, C
+
+QUESTION 23
+この問題については、HipLocal のケーススタディを参照してください。
+ビジネス要件を満たすために、HipLocal はどのようにアプリケーションの状態を保存するのでしょうか？
+
+A. ローカル SSDを使用して状態を保存します。
+B. MySQL の前に memcache 層を配置します。
+C. ステート ストレージをGoogle Cloud Spanner に移動します。
+D. MySQLインスタンスをGoogle Cloud SQL に置き換えます。
+Correct Answer: B
+
+QUESTION 24
+この問題については、HipLocal のケーススタディを参照してください。
+HipLocal は、MySQL デプロイメントの耐障害性を向上させながら、ビジネス要件と技術的要件を満たしたいと考えています。
+どの構成を選択すべきでしょうか？
+
+A. Google Compute Engine 上の現在の単一インスタンスのMySQL と、Google Compute Engine 上の複数の読み取り専用 MySQL サーバを使用します。
+B. 現在のシングル インスタンス MySQLをGoogle Compute Engine 上で使用し、外部マスター構成でGoogle Cloud SQL にデータを複製します。
+C. 現在のシングル インスタンスのMySQL インスタンスをGoogle Cloud SQL に置き換え、高可用性を構成します。
+D. 現在のシングルインスタンスのMySQL インスタンスをGoogle Cloud SQLにリプレースし、さらに設定することなくGoogleが冗長性を提供します。
+Correct Answer: B
+
+QUESTION 25
+Google Compute Engine 上にデプロイされたアプリケーションのメモリ使用量を表示したいと思います。
+どうすればよいでしょうか？
+
+A. Google Stackdriver Client Library をインストールします。
+B. Google Stackdriver Monitoring Agent をインストールします。
+C. Google Stackdriver Metrics Explorer を使用します。
+D. Google Cloud Platform Console を使用します。
+Correct Answer: C
+
+Reference:
+? Google Cloud Platform: how to monitor memory usage of VM instances
+
+QUESTION 26
+あなたはソーシャル メディア アプリケーションに取り組んでいます。ユーザーが画像をアップロードできる機能を追加する予定です。これらの画像のサイズは2 MB 〜 1 GBです。
+このアップロード機能のために、インフラストラクチャ運用のオーバーヘッドを最小限に抑えたいと考えています。
+あなたは何をすべきでしょうか？
+
+A. 画像を直接受け付けるようにアプリケーションを変更し、他のユーザー情報を保存するデータベースに画像を保存します。
+B. Google Cloud Stoareg 用の署名付き URL を作成するようにアプリケーションを変更します。これらの署名付きURLをクライアントアプリケーションに転送して、Google Cloud Storage に画像をアップロードします。
+C. ユーザー画像を受け入れるようにGoogle Cloud Platform 上のWebサーバーを設定し、アップロードされたファイルを保持するファイルストアを作成します。ファイル ストアから画像を取得するようにアプリケーションを変更します。
+D. Google Cloud Storage にユーザーごとに別のバケットを作成します。各バケットへの書き込みアクセスを許可するために、別のサービスアカウントを割り当てます。ユーザー情報に基づいて、サービスアカウントの資格情報をクライアント アプリケーションに転送します。アプリケーションはこのサービスアカウントを使用して、Google Cloud Storage に画像をアップロードします。
+Correct Answer: B
+
+Reference:
+? 署名付き URL を活用して Cloud Storage に画像ファイルを直接アップロードするアーキテクチャを設計する
+
+QUESTION 27
+使用しているアプリケーションはローカルでテストした場合は正常に動作しますが、Google App Engine standard 環境にデプロイした場合は動作が著しく遅くなります。
+この問題を診断したいとします。
+どうすればよいでしょうか？
+
+A. アプリケーションがローカルでより高速に動作することを示すチケットを Google Cloud サポートに提出します。
+B. Google Stackdriver Debugger Snapshots を使用して、アプリケーションのポイント イン タイム実行を確認します。
+C. Google Stackdriver トレースを使用して、アプリケーション内のどの機能がより高いレイテンシを持つかを判断します。
+D. アプリケーションにロギング コマンドを追加し、Google Stackdriver Logging を使用して、遅延の問題が発生している場所を確認します。 
+Correct Answer: D
+
+QUESTION 28
+Google App Engine standard 構成は以下の通りです。
+・service: production
+・instance_class: B1
+アプリケーションを5つのインスタンスに制限したいとします。
+どのコードスニペットを設定に含めるべきでしょうか？
+
+A. manual_scaling:
+instances: 5
+min_pending_latency: 30ms
+B. manual_scaling:
+max_instances: 5
+idle_timeout: 10m
+C. basic_scaling:
+instances: 5
+min_pending_latency: 30ms
+D. basic_scaling:
+max_instances: 5
+idle_timeout: 10m
+Correct Answer: C
+
+QUESTION 29
+アナリティクス システムは、Google BigQuery データセットに対してクエリを実行します。
+SQL クエリはバッチで実行され、SQL ファイルの内容を Google BigQuery CLI に渡します。その後、Google BigQuery CLI の出力を別のプロセスにリダイレクトします。しかし、クエリの実行時にGoogle BigQuery CLI からパーミッションエラーが発生しています。
+この問題を解決したいと思います。
+どうすればよいでしょうか？
+
+A.サービスアカウントにGoogle BigQuery Data Viewer とGoogle BigQuery Job User のロールを付与します。
+B.サービスアカウントにGoogle BigQuery データ編集者とGoogle BigQuery データ閲覧者 のロールを付与します。
+C. SQLクエリからGoogle BigQuery にビューを作成し、CLI のビューからSELECT *を実行します。
+D. Google BigQueryで新しいデータセットを作成し、ソーステーブルを新しいデータセットにコピーするCLIから新しいデータセットとテーブルをクエリする。
+Correct Answer: B 
+
+QUESTION 30
+マネージド インスタンス グループ（MIG）によって制御されるアプリケーションがあります。
+アプリケーションの新しいバージョンをデプロイするときは、コストを最小限に抑え、インスタンスの数を増やしてはなりません。 新しいインスタンスが作成されるたびに、新しいインスタンスが正常な場合にのみ展開が続行されるようにする必要があります。
+あなたは何をするべきか？
+
+A. maxSurgeを1に設定し、maxUnavailableを0に設定して、ローリング アクションを実行します。
+B. maxSurgeを0、maxUnavailableを1に設定してローリング アクションを実行します。
+C. maxHealthyを1に設定し、maxUnhealthyを0に設定して、ローリングア クションを実行します。
+D. maxHealthyを0、maxUnhealthyを1に設定してローリング アクションを実行します。
+Correct Answer: A
+
+Reference:
+? MIG への更新のロールアウト
+
+QUESTION 31
+会社はオンプレミスのHadoop 環境をクラウドに移行しようと計画しています。
+HDFSに保存されているデータのストレージ コストの増加とメンテナンスは、貴社にとって大きな懸念事項です。また、既存のデータ分析ジョブや既存のアーキテクチャの変更を最小限に抑えたいと考えています。
+どのように移行を進めるべきでしょうか？
+
+A. Hadoopに保存されているデータをGoogle BigQueryに移行します。ジョブを変更して、オンプレミスのHadoop 環境ではなく、Google BigQueryから情報をソースするようにします。
+B. コストを節約するために、SSDではなくHDDを使用してGoogle Compute Engineインスタンスを作成します。その後、Google Compute Engine インスタンスで既存環境の新しい環境へのフル マイグレーションを実行します。
+C. Google Cloud Platform 上にGoogle Cloud Dataproc クラスタを作成し、Hadoop 環境を新しいGoogle Cloud Dataprocクラスタに移行します。ストレージコストを節約するために、HDFS データをより大きな HDDに移動します。
+D. Google Cloud Platform 上にGoogle Cloud Dataproc クラスタを作成し、Hadoop コードオブジェクトを新しいクラスタに移行します。データを Google Cloud Storage に移動し、Google Cloud Dataproc コネクタを活用して、そのデータ上でジョブを実行します。
+Correct Answer: D
+
+QUESTION 32
+データはGoogle Cloud Storage バケットに保存されます。
+仲間の開発者から、Google Cloud Storage からダウンロードしたデータがAPIのパフォーマンスを低下させていると報告されています。
+この問題を調査して、Google Cloud Platform サポートチームに詳細を提供したいと考えています。
+どのコマンドを実行しますか？
+
+A. gsutil test ?o output.json gs://my-bucket
+B. gsutil perfdiag ?o output.json gs://my-bucket
+C. gcloud compute scp example-instance:~/test-data ?o output.json gs://my-bucket
+D. gcloud services test ?o output.json gs://my-bucket 
+Correct Answer: B
+
+Reference:
+? Sometimes get super-slow download rates from Google Cloud Storage, severely impacting workflow
+
+QUESTION 33
+Google Cloud Build build を使用して、Docker イメージを開発環境、テスト環境、本番環境に推進しています。これらの環境のそれぞれに同じDocker イメージがデプロイされていることを確認する必要があります。
+ビルド内のDocker イメージはどのように識別する必要がありますか？
+
+A. 最新のDocker イメージ タグを使用します。
+B. 固有のDocker イメージ名を使用します。
+C. Docker イメージのダイジェストを使用します。
+D. セマンティック バージョンのDocker イメージ タグを使用します。
+Correct Answer: D
