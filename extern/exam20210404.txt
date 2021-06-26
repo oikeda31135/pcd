@@ -278,7 +278,7 @@ Reference contents:
 ? BigQuery へのデータのストリーミング #ストリーミング挿入の例
 
 
-Question 14
+Question 14(labo)
 Google Kubernetes Engine（GKE）上でホストされている JPEG 画像サイズ変更 API を開発していただきます。
 サービスの呼び出し元は同じGKE クラスタ内に存在し、クライアントがサービスの IP アドレスを取得できるようにしたいとします。
 何をすべきでしょうか？
@@ -295,7 +295,7 @@ Reference contents:
 ? サービス ディスカバリと DNS | Kubernetes Engine ドキュメント
 
 
-Question 15
+Question 15(labo)
 Google Cloud Build を使用して Google Cloud Source Repositories に保存されているアプリケーションのソースコードをビルドしてテストしています。
 ビルド処理には Google Cloud Build 環境では利用できないビルドツールが必要です。
 どうすればよいでしょうか？
