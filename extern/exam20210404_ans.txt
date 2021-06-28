@@ -615,6 +615,7 @@ B. StatefulSet
 C. ReplicaSet
 D. ReplicaController
 Correct Answer: B → C
+(これは絶対Bでよい)
 
 Reference contents:
 ? Chapter 10. StatefulSets: deploying replicated stateful applications ・ Kubernetes in Action
