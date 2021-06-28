@@ -274,11 +274,6 @@ D. Google Cloud Storage バケットのストレージクラスを Multi-regiona
 
 
 
-Reference contents:
-? Usage limits | Gmail API | Google Developers
-? HTTP status and error codes for JSON | Cloud Storage
-
-
 Question 18
 Android とiOS のアプリで使用される API を構築しています。
 その API は「HTTPをサポートすること」「帯域幅のコストを最小限に抑えること」「モバイルアプリと簡単に統合すること」が条件です
@@ -290,11 +285,6 @@ C. gRPC-based APIs
 D. SOAP-based APIs
 
 
-
-
-Reference contents:
-? How to Build a RESTful API for Your Mobile App?
-? API 設計: gRPC、OpenAPI、REST の概要と、それらを使用するタイミングを理解する
 
 
 Question 19
@@ -311,14 +301,10 @@ D. 読み取り/書き込みトランザクションを使用してステイル�
 
 
 
-Reference contents:
-? ゲーム データベースとして Cloud Spanner を使用する場合のベスト プラクティス | Google Cloud
-? 読み取り | Cloud Spanner
-
-
 Question 20
 アプリケーションは Google Kubernetes Engine（GKE）クラスタにデプロイされています。
-アプリケーションの新しいバージョンがリリースされると CI/CD ツールは spec.template.spec.containers[0].image の値を更新して新しいアプリケーション バージョンのDocker イメージを参照します。Deployment オブジェクトが変更を適用するとき、新しいバージョンのレプリカを少なくとも1つデプロイし、新しいレプリカが健全になるまで以前のレプリカを維持したいと思います。
+アプリケーションの新しいバージョンがリリースされると CI/CD ツールは spec.template.spec.containers[0].image の値を更新して新しいアプリケーション バージョンのDocker イメージを参照します。
+Deployment オブジェクトが変更を適用するとき、新しいバージョンのレプリカを少なくとも1つデプロイし、新しいレプリカが健全になるまで以前のレプリカを維持したいと思います。
 次の Kubernetes Deployment オブジェクトにどの変更を加えればよいでしょうか？
 
 apiVersion: apps/v1
@@ -344,14 +330,10 @@ D. maxSurge=0 maxUnavailable=1 に設定して Deployment strategy を rollingUp
 
 
 
-Reference contents:
-? 標準クラスタのアップグレード | Kubernetes Engine ドキュメント | Google Cloud
-? ローリング アップデートの実施 | Kubernetes Engine ドキュメント | Google Cloud
-
-
 Question 21
 簡単なHTML アプリケーションをインターネット上で公開する予定です。
-このサイトではアプリケーションのFAQに関する情報を保持しています。このアプリケーションは静的なもので、画像、HTML、CSS、Javascript が含まれています。
+このサイトではアプリケーションのFAQに関する情報を保持しています。
+このアプリケーションは静的なもので、画像、HTML、CSS、Javascript が含まれています。
 このアプリケーションをできるだけ少ない手順でインターネット上で利用できるようにしたいと考えています。
 どうすればいいのでしょうか？
 
@@ -361,10 +343,6 @@ C. Apache Web サーバーがインストールされた Google Compute Engine �
 D. 最初にアプリケーションをコンテナ化します。このコンテナを Google Kubernetes Engine（GKE）にデプロイし、アプリケーションをホストする GKE ポッドに外部 IP アドレスを割り当てます。
 
 
-
-
-Reference contents:
-? 静的ウェブサイトのホスティング | Cloud Storage | Google Cloud
 
 
 Question 22
@@ -380,10 +358,6 @@ D. Stackdriver デバッグ ログポイント
 
 
 
-Reference contents:
-? GCP Stackdriver Tutorial : Debug Snapshots, Traces, Logging and Logpoints
-
-
 Question 23
 Stackdriver Logging エージェントを使用して Google Compute Engine 仮想マシン インスタンスから Stackdriver にアプリケーションのログ ファイルを送信したいと考えています。
 Stackdriver Logging エージェント をインストールした後、最初に何をすればいいでしょうか？
@@ -396,13 +370,11 @@ D. アプリケーションのログ エントリに一致するフィルタを�
 
 
 
-Reference contents:
-? エージェントの構成 #追加入力からログをストリーミングする | Cloud Logging
-
-
 Question 24
 会社には数百人の従業員に分析情報を提供する Google BigQuery データマートがあります。
-ユーザーは重要なワークロードを中断することなくジョブを実行したいと考えています。このユーザーはジョブの実行にかかる時間を気にしていません。会社のコストとエンジニアの労力を最小限に抑え、この要求を満たしたいと考えています。
+ユーザーは重要なワークロードを中断することなくジョブを実行したいと考えています。
+このユーザーはジョブの実行にかかる時間を気にしていません。
+会社のコストとエンジニアの労力を最小限に抑え、この要求を満たしたいと考えています。
 何をすべきでしょうか？
 
 A. ジョブをバッチ ジョブとして実行するようにユーザーに依頼します。
@@ -411,10 +383,6 @@ C. 既存のプロジェクトに job.user の役割としてユーザーを追�
 D. 重要なワークロードが実行されていないときにユーザーがジョブを実行できるようにします。
 
 
-
-
-Reference contents:
-? インタラクティブ クエリとバッチクエリのジョブの実行 #バッチクエリの実行 | BigQuery
 
 
 Question 25
@@ -431,7 +399,9 @@ D. Stackdriver Monitoring を使用してリソースをキャプチャし、ア
 
 Question 26
 XMLHttpRequest を使ってサードパーティの API とコンテンツの通信を行うユーザーインターフェイス（UI）を備えた単一ページのWebアプリケーションを作成しています。
-API の結果によってUI に表示されるデータは同じWebページに表示される他のデータよりも重要度が低いため、リクエストによってはAPI のデータがUI に表示されないことも許容されます。ただし、API への呼び出しによってUI の他の部分のレンダリングが遅れることがあってはなりません。API のレスポンスがエラーやタイムアウトになった場合でもアプリケーションのパフォーマンスを向上させたいと考えています。
+API の結果によってUI に表示されるデータは同じWebページに表示される他のデータよりも重要度が低いため、リクエストによってはAPI のデータがUI に表示されないことも許容されます。
+ただし、API への呼び出しによってUI の他の部分のレンダリングが遅れることがあってはなりません。
+API のレスポンスがエラーやタイムアウトになった場合でもアプリケーションのパフォーマンスを向上させたいと考えています。
 どうすればいいのでしょうか？
 
 A. API へのリクエストの非同期オプションを false に設定し、タイムアウトやエラーが発生したときにAPI の結果を表示するウィジェットを省略します。
@@ -453,11 +423,6 @@ D. ドメイン全体の権限を委譲された Google App Engine サービス 
 
 
 
-
-Reference contents:
-? Authenticate your users | Google Drive API | Google Developers
-
-
 Question 28
 Google Kubernetes Engine（GKE）クラスタを作成して次のコマンドを実行します。
 
@@ -472,11 +437,6 @@ B. Google Cloud Consoleで Google Compute Engine 割り当ての追加をリク�
 C. サポートケースを開き、GKE 割り当ての追加をリクエストします。
 D. クラスタ内のサービスをデカップリングし、より少ないコア数で機能するように新しいクラスタを書き換えます。
 
-
-
-
-Reference contents:
-? 割り当てと上限 #クラスタあたりの上限 | Kubernetes Engine ドキュメント
 
 
 Question 29
@@ -494,19 +454,33 @@ D. カンマで区切られた文字列
 
 Question 30
 会社には従業員の旅費と経費に関する情報を保持する「Master」という名前のGoogle BigQuery データセットがあります。
-この情報は従業員部門別に整理されています。 つまり、従業員は自分の部門の情報のみを表示できる必要があります。セキュリティフレームワークを適用して最小限の手順でこの要件を実施します。
+この情報は従業員部門別に整理されています。
+つまり、従業員は自分の部門の情報のみを表示できる必要があります。
+セキュリティフレームワークを適用して最小限の手順でこの要件を実施します。
 何をするべきでしょうか？
 
-A. 各部門ごとに個別のデータセットを作成します。特定の部門の特定のデータセットからレコードを選択するために適切な WHERE ステートメントを持つビューを作成します。このビューにMaster データセットのレコードにアクセスします。この部門固有のデータセットに対する権限を従業員に付与します。
-B. 部門ごとに個別のデータセットを作成する。各部門のデータパイプラインを作成して、Master データセットから部門の特定のデータセットに適切な情報をコピーします。 この部門固有のデータセットに対する権限を従業員に付与します。
-C. Master データセットという名前のデータセットを作成します。Master データセットの部門ごとに個別のビューを作成します。 従業員が自分の部門の特定のビューにアクセスできるようにします。
-D. Master データセットという名前のデータセットを作成する。Master データセットの部門ごとに個別のテーブルを作成します。 従業員が自分の部門の特定のテーブルにアクセスできるようにします。
-Correct Answer: B → C
+A. 各部門ごとに個別のデータセットを作成します。
+   特定の部門の特定のデータセットからレコードを選択するために適切な WHERE ステートメントを持つビューを作成します。このビューにMaster データセットのレコードにアクセスします。
+   この部門固有のデータセットに対する権限を従業員に付与します。
+B. 部門ごとに個別のデータセットを作成する。
+   各部門のデータパイプラインを作成して、Master データセットから部門の特定のデータセットに適切な情報をコピーします。
+   この部門固有のデータセットに対する権限を従業員に付与します。
+C. Master データセットという名前のデータセットを作成します。
+   Master データセットの部門ごとに個別のビューを作成します。
+   従業員が自分の部門の特定のビューにアクセスできるようにします。
+D. Master データセットという名前のデータセットを作成する。
+   Master データセットの部門ごとに個別のテーブルを作成します。
+   従業員が自分の部門の特定のテーブルにアクセスできるようにします。
+
+
 
 
 Question 31
 実稼働中のアプリケーションがあります。
-マネージド インスタンス グループよって制御される Google Compute Engine VM マシンインスタンスにデプロイされます。トラフィックは HTTP (s) ロードバランサーを介してインスタンスにルーティングされます。ユーザーはアプリケーションにアクセスできません。アプリケーションが使用できない場合に警告する監視手法を実装する必要があります。
+マネージド インスタンス グループよって制御される Google Compute Engine VM マシンインスタンスにデプロイされます。
+トラフィックは HTTP (s) ロードバランサーを介してインスタンスにルーティングされます。
+ユーザーはアプリケーションにアクセスできません。
+アプリケーションが使用できない場合に警告する監視手法を実装する必要があります。
 どの監視手法を良いでしょうか？
 
 A. スモークテスト
@@ -516,14 +490,11 @@ D. マネージド インスタンス グループ のヘルスチェック
 
 
 
-
-Reference contents:
-? Stackdriver Monitoring Automation Part 3: Uptime Checks | by Charles | Google Cloud ? Community
-
-
 Question 32
 サーバーアプリケーションの負荷テストを行っています。
-最初の 30秒間にこれまで非アクティブだった Google Cloud Storage バケットが毎秒 2,000の書き込みリクエストと毎秒 7,500の読み取りリクエストを処理していることがわかりました。需要が高まるにつれて、アプリケーションは Google Cloud Storage JSON API から断続的に 5xx および 429 HTTP レスポンスを受信するようになりました。Google Cloud Storage API からの失敗したレスポンスを減らしたいと考えています。
+最初の 30秒間にこれまで非アクティブだった Google Cloud Storage バケットが毎秒 2,000の書き込みリクエストと毎秒 7,500の読み取りリクエストを処理していることがわかりました。
+需要が高まるにつれて、アプリケーションは Google Cloud Storage JSON API から断続的に 5xx および 429 HTTP レスポンスを受信するようになりました。
+Google Cloud Storage API からの失敗したレスポンスを減らしたいと考えています。
 何をするべきでしょうか？
 
 A. アップロードを多数のファイルをストレージバケットに分散します。
@@ -533,14 +504,10 @@ D. アプリケーションクライアントからのアップロードレー�
 
 
 
-
-Reference contents:
-? リクエスト レートとアクセス配信のガイドライン #リクエスト レートを徐々に増やす | Cloud Storage  | Google Cloud
-
-
 Question 33
 アプリケーションはマネージド インスタンス グループによって制御されます。
-マネージド インスタンス グループ内のすべてのインスタンス間で大きな読み取り専用データセットを共有を行いたいと考えています。そのために、各インスタンスを迅速に起動し、ファイルシステムを介して非常に低いレイテンシでデータセットにアクセスできるようにする必要があり、ソリューションの総コストを最小限に抑える必要もあります。
+マネージド インスタンス グループ内のすべてのインスタンス間で大きな読み取り専用データセットを共有を行いたいと考えています。
+そのために、各インスタンスを迅速に起動し、ファイルシステムを介して非常に低いレイテンシでデータセットにアクセスできるようにする必要があり、ソリューションの総コストを最小限に抑える必要もあります。
 何をするべきでしょうか？
 
 A. データを Google Cloud Storage のバケットに移動し、Google Cloud Storage FUSE を使用してバケットをファイルシステムにマウントします。
@@ -550,13 +517,9 @@ D. データを Google Compute Engine の永続ディスクに移動し、スナ
 
 
 
-
-Reference contents:
-? ディスクの作成とアタッチ | Compute Engine ドキュメント
-
-
 Question 34
-同じ Virtual Private Cloud（VPC）内の複数のクライアントによって呼び出す必要があるGoogle Compute Engine VM インスタンスでホストされる HTTP API を開発しています。クライアントがサービスのIPアドレスを取得できるようにします。
+同じ Virtual Private Cloud（VPC）内の複数のクライアントによって呼び出す必要があるGoogle Compute Engine VM インスタンスでホストされる HTTP API を開発しています。
+クライアントがサービスのIPアドレスを取得できるようにします。
 何をするべきでしょうか？
 
 A. 静的外部 IP アドレスを予約して HTTP (S) ロードバランサ の転送ルールに割り当てます。 クライアントはこのIP アドレスを使用してサービスに接続する必要があります。
@@ -580,10 +543,6 @@ D. Google Cloud Pub/Sub にログをエクスポートし、/api/alpha に一致
 
 
 
-Reference contents:
-? カウンタ指標の作成 | Cloud Logging
-
-
 Question 36
 モノリシック アプリケーションをマイクロサービス モデルに従うように再設計したいとします。
 この変更がビジネスに与える影響を最小限に抑えながら効率的にこれを達成したいと考えています。
@@ -597,13 +556,10 @@ D. モノリスとは別に適切なマイクロサービスで新しいアプ�
 
 
 
-Reference contents:
-? モノリシック アプリケーションを Google Kubernetes Engine のマイクロサービスに移行する | Google Cloud
-
-
 Question 37
 既存のアプリケーションはユーザーの状態情報を単一の MySQL データベースに保持しています。
-この状態情報は非常にユーザー固有のものであり、ユーザーがアプリケーションをどのくらいの期間使用しているかに大きく依存しています。MySQL データベースは様々なユーザーのためにスキーマを維持および拡張するという課題を引き起こしています。
+この状態情報は非常にユーザー固有のものであり、ユーザーがアプリケーションをどのくらいの期間使用しているかに大きく依存しています。
+MySQL データベースは様々なユーザーのためにスキーマを維持および拡張するという課題を引き起こしています。
 どのストレージ オプションを選択すべきでしょうか？
 
 A. Google Cloud SQL
@@ -611,12 +567,6 @@ B. Google Cloud Storage
 C. Google Cloud Spanner
 D. Google Cloud Datastore/Firestore
 
-
-
-
-Reference contents:
-? MySQL から Cloud SQL への移行 | Solutions | Google Cloud
-? Datastore の概要 #最適な用途 | Cloud Datastore ドキュメント
 
 
 Question 38
@@ -637,16 +587,19 @@ Question 39
 運用チームはすべてのDocker イメージを運用チームが管理する安全に管理された中央のDocker レジストリに公開することを要求しています。
 何をすべきでしょうか？
 
-A. Google Cloud Container Registry を使用して各開発チームのプロジェクトにレジストリを作成します。 Docker イメージをプロジェクトのレジストリにプッシュするように Google Cloud Build のビルドを構成します。運用チームに各開発チームのレジストリへのアクセスを許可します。
-B. Google Cloud Container Registry が構成されている運用チーム用に別のプロジェクトを作成します。各開発者チームのプロジェクトの Google Cloud Build サービス アカウントに適切な権限を割り当てて、運用チームのレジストリへのアクセスを許可します。
-C.Google Cloud Container Registry が構成されている運用チーム用に別のプロジェクトを作成します。開発チームごとにサービス アカウントを作成し、適切な権限を割り当て、運用チームのレジストリへのアクセスを許可します。サービス アカウント キーファイルをソースコード リポジトリに保存し、使用して運用チームのレジストリに対して認証します。
-D. Google Compute Engine 仮想マシンインスタンスにオープンソースのDocker レジストリがデプロイされている運用チーム用に別のプロジェクトを作成します。開発チームごとにユーザー名とパスワードを作成します。ユーザー名とパスワードをソースコードリポジトリに保存し、使用して運用チームのDocker レジストリに対して認証します。
+A. Google Cloud Container Registry を使用して各開発チームのプロジェクトにレジストリを作成します。
+   Docker イメージをプロジェクトのレジストリにプッシュするように Google Cloud Build のビルドを構成します。
+   運用チームに各開発チームのレジストリへのアクセスを許可します。
+B. Google Cloud Container Registry が構成されている運用チーム用に別のプロジェクトを作成します。
+   各開発者チームのプロジェクトの Google Cloud Build サービス アカウントに適切な権限を割り当てて、運用チームのレジストリへのアクセスを許可します。
+C. Google Cloud Container Registry が構成されている運用チーム用に別のプロジェクトを作成します。
+   開発チームごとにサービス アカウントを作成し、適切な権限を割り当て、運用チームのレジストリへのアクセスを許可します。
+   サービス アカウント キーファイルをソースコード リポジトリに保存し、使用して運用チームのレジストリに対して認証します。
+D. Google Compute Engine 仮想マシンインスタンスにオープンソースのDocker レジストリがデプロイされている運用チーム用に別のプロジェクトを作成します。
+   開発チームごとにユーザー名とパスワードを作成します。
+   ユーザー名とパスワードをソースコードリポジトリに保存し、使用して運用チームのDocker レジストリに対して認証します。
 
 
-
-
-Reference contents:
-? Google Cloud Container Registry | Google Cloud
 
 
 Question 40
@@ -660,10 +613,6 @@ C. ReplicaSet
 D. ReplicaController
 
 
-
-
-Reference contents:
-? Chapter 10. StatefulSets: deploying replicated stateful applications ・ Kubernetes in Action
 
 
 Question 41
@@ -692,10 +641,6 @@ D. プロジェクト B で Google Cloud Storage API を有効にします。
 
 
 
-Reference contents:
-? アクセス制御 | Cloud Functions ドキュメント
-
-
 Question 43
 この問題については HipLocal のケーススタディを参照してください。
 HipLocal の .net ベースの認証サービスが断続的な負荷で失敗します。
@@ -706,11 +651,6 @@ B. Google Cloud Functions を使用してオートスケーリングを使用し
 C. サービスに Google Compute Engine クラスタを使用します。
 D. サービス専用の Google Compute Engine 仮想マシンインスタンスを使用します。
 
-
-
-
-Reference contents:
-? Autoscaling an Instance Group with Custom Cloud Monitoring Metrics
 
 
 Question 44
