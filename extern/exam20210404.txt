@@ -13,12 +13,6 @@ D. gcloud dataproc cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/
 
 
 
-gsutil cpコマンドはローカルファイルと「gsutil config」を実行して生成したストレージのbotoファイルの間でデータをコピーすることができます。
-
-Reference contents:
-? オブジェクトのアップロード | Cloud Storage
-
-
 Question 2
 アプリケーションを Google Cloud Platform に移行しましたが既存のモニタリング プラットフォームを使用していました。
 しかし、通知システムがタイムクリティカルな問題に対して遅すぎることがわかりました。
@@ -32,10 +26,6 @@ D. 一部のトラフィックを古いプラットフォームに移行し、2�
 
 
 
-Reference contents:
-? Google Cloud Monitoring | Google Cloud
-
-
 Question 3
 MySQL データベースを Google Cloud Platfrom の Google Cloud SQL データベースに移行しようとしています。
 この Google Cloud SQL インスタンスに接続する Google Compute Engine 仮想マシン インスタンスがあります。Google Cloud SQL にアクセスできるようにするために Google Compute Engine インスタンス IP をホワイトリストに登録したくありません。
@@ -47,11 +37,6 @@ C. Google Cloud SQL に外部インスタンスからのデータベースへの
 D. 1つのプロジェクトにGoogle Cloud SQL インスタンスを作成する。別のプロジェクトにGoogle Compute Engine インスタンスを作成する。これら2つのプロジェクト間にVPNを作成し、Google Cloud SQL への内部アクセスを可能します。
 
 
-
-
-Reference contents:
-? 外部アプリケーションから Cloud SQL に接続する | Google Cloud
-? MySQL クライアントを Compute Engine から接続する | Cloud SQL for MySQL
 
 
 Question 4
@@ -91,11 +76,6 @@ D. gcloud compute firewall-rules create allow-lb ?network load-balancer ?allow t
 
 
 
-Reference contents:
-? ネットワーキング用に VM を構成したユースケース | VPC | Google Cloud
-? ヘルスチェックの作成 | Load Balancing
-
-
 Question 5
 Webサイトは Google Compute Engine で公開されています。
 マーケティングチームは 3つの異なるウェブサイトデザイン間のコンバージョン率をテストしたいと考えています。
@@ -109,10 +89,6 @@ D. Google Cloud Functions で Web サイトを 3つの独立した機能とし�
 
 
 
-Reference contents:
-?トラフィックの分割 | Google Cloud
-
-
 Question 6
 ローカルのスクリプトとそのすべてのコンテンツをローカルのワークステーションからGoogle Compute Engine VM インスタンスへコピーする必要があります。
 どのコマンドを使用するべきでしょうか？
@@ -122,14 +98,14 @@ B. gsutil cp ?project “my-gcp-project” -R ~/local-scripts/ gcp-instance-name
 C. gcloud compute scp ?project “my-gcp-project” ?recurse ~/local-scripts/ gcp-instance-name:~/server-scripts/ ?zone “us-east1-b”
 D. gcloud compute mv ?project “my-gcp-project” ?recurse ~/local-scripts/ gcp-instance-name:~/server-scripts/ ?zone “us-east1-b”
 
-Reference contents:
-? gcloud compute copy-files | Cloud SDK Documentation | Google Cloud
-? gcloud compute scp | Cloud SDK Documentation
+
 
 
 Question 7
 Stackdriver Monitoring エージェントがインストールされた Google Compute Engine VM インスタンスにアプリケーションをデプロイします。
-アプリケーションはインスタンス上のUNIX プロセスです。 UNIX プロセスが少なくとも 5分間実行されなかった場合にアラートを表示させます。メトリックまたはログを生成するようにアプリケーションを変更することはできません。
+アプリケーションはインスタンス上のUNIX プロセスです。 
+UNIX プロセスが少なくとも 5分間実行されなかった場合にアラートを表示させます。
+メトリックまたはログを生成するようにアプリケーションを変更することはできません。
 どのアラート条件で構成するべきでしょうか？
 
 A. 稼働時間チェック
@@ -138,11 +114,6 @@ C. 指標の不在
 D. 指標しきい値
 
 
-
-
-Reference contents:
-? アラートの動作 | Cloud Monitoring | Google Cloud
-? アラート ポリシーの種類 #指標しきい値条件 | Cloud Monitoring
 
 
 Question 8
@@ -156,9 +127,6 @@ D. SQL でUNION ALL 演算子を使用してテーブルを結合します。
 
 
 
-
-Reference contents:
-? SQL: UNION ALL Operator
 
 
 Question 9
@@ -174,28 +142,18 @@ D. 再作成（Recreate） デプロイメント
 
 
 
-Reference contents:
-? Six Strategies for Application Deployment ? The New Stack
-
-
 Question 10
 会社は人気のあるアプリケーションのユーザーを米国外に拡大したいと考えています。
 この会社はアプリケーション用のデータベースの可用性  99.999%  を確保したいと考えており、また、世界中のユーザーのために読み取り遅延を最小限にしたいと考えています。
 どのアクションをおこなうべきでしょうか？（回答を 2つ選んでください）
 
 A. nam-asia-eur1 構成でマルチリージョンの Google Cloud Spannerインスタンスを作成します。
-B. nam3 構成でマルチリージョンの Google Cloud Spanner インスタンスを作成します。
+B.          nam3 構成でマルチリージョンの Google Cloud Spanner インスタンスを作成します。
 C. 少なくとも 3つの Google Cloud Spanner ノードを持つクラスタを作成する。
 D. 少なくとも 1つの Google Cloud Spanner ノードを持つクラスタを作成する。
 E. 少なくとも 1つのノードで別々のリージョンに最低 2つのGoogle Cloud Spanner インスタンスを作成する。
 F. Google Cloud Dataflow パイプラインを作成して異なるデータベース間でデータを複製します。
 
-
-
-
-Reference contents:
-? インスタンス #マルチリージョン構成 | Cloud Spanner
-? Cloud Spanner 以外のデータベースからのデータ インポート
 
 
 
@@ -209,10 +167,6 @@ C. 署名付き URL を使用してファイルをアップロードします。
 D.  API をマルチパートファイル アップロード API に変更します。
 
 
-
-
-Reference contents:
-? Google Cloud Platform
 
 
 Question 12
@@ -244,11 +198,6 @@ port: 80
 
 
 
-GKE Ingress コントローラが readinessProbe をヘルスチェックとして使用するには Ingress 用の Pod が Ingress の作成時に存在する必要があります。レプリカのサイズが 0 に設定されている場合はデフォルトの稼働状態チェックが適用されます。
-
-Reference contents:
-? Kubernetes ベスト プラクティス 6 選
-
 
 Question 13
 同僚から次のコードを確認するように依頼されました。
@@ -274,10 +223,6 @@ D. 各行を Google Cloud Storage オブジェクトに並行して書き込み�
 
 
 
-Reference contents:
-? BigQuery へのデータのストリーミング #ストリーミング挿入の例
-
-
 Question 14(labo)
 Google Kubernetes Engine（GKE）上でホストされている JPEG 画像サイズ変更 API を開発していただきます。
 サービスの呼び出し元は同じGKE クラスタ内に存在し、クライアントがサービスの IP アドレスを取得できるようにしたいとします。
@@ -291,10 +236,6 @@ D. GKE エンドポイントを定義し、クライアントは Google Cloud DN
 
 
 
-Reference contents:
-? サービス ディスカバリと DNS | Kubernetes Engine ドキュメント
-
-
 Question 15(labo)
 Google Cloud Build を使用して Google Cloud Source Repositories に保存されているアプリケーションのソースコードをビルドしてテストしています。
 ビルド処理には Google Cloud Build 環境では利用できないビルドツールが必要です。
@@ -305,11 +246,6 @@ B. カスタム Google Cloud Builder イメージを作成してビルド手順�
 C. バイナリを Google Cloud Source Repositories リポジトリに含め、ビルド スクリプトで参照します。
 D. Google Cloud Build 公開バグトラッカーに対して機能のリクエストを提出してバイナリを Google Cloud Build 環境に追加してもらうように依頼します。
 
-
-
-
-Reference contents:
-? コミュニティ提供のビルダーとカスタム ビルダーの使用 #カスタム ビルダーの作成
 
 
 Question 16
