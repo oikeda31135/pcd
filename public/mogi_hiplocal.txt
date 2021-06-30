@@ -92,8 +92,10 @@ HipLocalの投資家は、フットプリントを拡大し、経験している
 
 ・Adopt the Google-recommended practices for cloud computing:
   クラウドコンピューティングにGoogleが推奨する手法を採用します。
+
   a. Develop standardized workflows and processes around application lifecycle management.
      アプリケーションライフサイクル管理に関する標準化されたワークフローとプロセスを開発します。
+
   b. Define service level indicators (SLIs) and service level objectives (SLOs).
      サービスレベルインジケーター（SLI）とサービスレベル目標（SLO）を定義します。
 
