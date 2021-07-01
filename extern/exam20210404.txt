@@ -748,7 +748,8 @@ D. 現在の単一の MySQL インスタンスを Google Cloud SQL に置き換�
 
 Question 51
 アプリケーションは複数の Google Kubernetes Engine クラスタで実行されています。
-各クラスタのデプロイメントによって管理されており、Deployment は各クラスタにPod の複数のレプリカを作成しています。すべてのクラスタにある Deployment 内のすべてのレプリカの標準出力に送信されたログを表示したいと考えています。
+各クラスタのデプロイメントによって管理されており、Deployment は各クラスタにPod の複数のレプリカを作成しています。
+すべてのクラスタにある Deployment 内のすべてのレプリカの標準出力に送信されたログを表示したいと考えています。
 どのコマンドを使用するべきでしょうか？
 
 A. kubectl logs [PARAM]
@@ -759,12 +760,12 @@ D. gcloud compute ssh [PARAM] “”-command= “sudo journalctl”
 
 
 
-Reference contents:
-? Config Sync ログの表示
-
 
 Question 52
-Google Cloud Build を使用して Google Cloud Source Repositories リポジトリへの各ソースコードのコミットに新しい Docker イメージを作成しています。アプリケーションはマスターブランチへのコミットごとに構築されており、マスターブランチへの特定のコミットを自動化された方法でリリースしたいと考えています。
+Google Cloud Build を使用して Google Cloud Source Repositories リポジトリへの各ソースコードのコミットに新しい 
+Docker イメージを作成しています。
+アプリケーションはマスターブランチへのコミットごとに構築されており、マスターブランチへの特定のコミットを
+自動化された方法でリリースしたいと考えています。
 どうすればよいでしょうか？
 
 A. 新しいリリースのために手動でビルドをトリガーします。
@@ -795,10 +796,6 @@ D. Event_timestamp をキーに設定します。
 
 
 
-Reference contents:
-? スキーマの設計 | Cloud Bigtable ドキュメント
-
-
 Question 54
 Google Compute Engine にデプロイされたアプリケーションのメモリ使用量を表示したいとします。
 何をするべきでしょうか？
@@ -809,12 +806,6 @@ C. Stackdriver Metrics Explorer を使用します。
 D. Google Cloud Console を使用します。
 
 
-
-
-
-Reference contents:
-? Google Cloud Platform: how to monitor memory usage of VM instances
-? Agent metrics | Cloud Monitoring
 
 
 Question 55
@@ -830,9 +821,6 @@ D. Stackdriver Monitoring を使用してクエリの実行時間をプロット
 
 
 
-Reference contents:
-? Google Cloud metrics #bigquery | Cloud Monitoring
-
 
 Question 56
 Google Cloud Spanner の顧客データベースのスキーマを設計しています。
@@ -840,31 +828,32 @@ Google Cloud Spanner の顧客データベースのスキーマを設計して�
 このスキーマをどのように設計すべきでしょうか。
 
 A. Customers という名前のテーブルを作成します。顧客の電話番号を保持するArray フィールドをテーブルに追加します。
-B. Customers という名前のテーブルを作成します。Phones という名前のテーブルを作成します。Phones というテーブルにCustomerId フィールドを追加して、電話番号からCustomerIdを見つけます。
-C. Customers という名前のテーブルを作成します。顧客の電話番号を保持するテーブルにArray フィールドを追加します。Array フィールドにセカンダリインデックスを作成します。
-D. Customers という名前のテーブルを親テーブルとして作成します。Phones という名前のテーブルを作成し、このテーブルをCustomer テーブルにインターリーブします。Phonesというテーブルの電話番号フィールドにインデックスを作成します。
+B. Customers という名前のテーブルを作成します。Phones という名前のテーブルを作成します。
+   Phones というテーブルにCustomerId フィールドを追加して、電話番号からCustomerIdを見つけます。
+C. Customers という名前のテーブルを作成します。
+   顧客の電話番号を保持するテーブルにArray フィールドを追加します。Array フィールドにセカンダリインデックスを作成します。
+D. Customers という名前のテーブルを親テーブルとして作成します。
+   Phones という名前のテーブルを作成し、このテーブルをCustomer テーブルにインターリーブします。
+   Phonesというテーブルの電話番号フィールドにインデックスを作成します。
 
 
 
-
-Reference contents:
-? スキーマとデータモデル #インターリーブされたテーブルの階層の作成 | Cloud Spanner
 
 
 Question 57
 Google App Engine に 1つのWebサイトを公開し、URL http://www.altostrat.com でアクセスできるようにする必要があります。
 どうすればいいのでしょうか？
 
-A. Google Search Console (Webmaster Central) でドメインの所有権を確認します。DNS の CNAME レコードを作成して Google App Engine のカノニカル名 ghs.googlehosted.com を指すようにします。
-B. Google Search Console (Webmaster Central) でドメインの所有権を確認します。単一のグローバル Google App Engine IP アドレスを指す A レコードを定義します。
-C. dispatch.yaml でマッピングを定義し、ドメイン www.altostrat.com を Google App Engine サービスに指定します。DNS の CNAME レコードを作成して Google App Engine のカノニカル名 ghs.googlehosted.com を指定します。
-D. dispatch.yaml でマッピングを定義し、ドメイン www.altostrat.com を Google App Engine サービスに指定します。単一のグローバル Google App Engine IP アドレスを指す A レコードを定義します。
+A. Google Search Console (Webmaster Central) でドメインの所有権を確認します。
+   DNS の CNAME レコードを作成して Google App Engine のカノニカル名 ghs.googlehosted.com を指すようにします。
+B. Google Search Console (Webmaster Central) でドメインの所有権を確認します。
+   単一のグローバル Google App Engine IP アドレスを指す A レコードを定義します。
+C. dispatch.yaml でマッピングを定義し、ドメイン www.altostrat.com を Google App Engine サービスに指定します。
+   DNS の CNAME レコードを作成して Google App Engine のカノニカル名 ghs.googlehosted.com を指定します。
+D. dispatch.yaml でマッピングを定義し、ドメイン www.altostrat.com を Google App Engine サービスに指定します。
+   単一のグローバル Google App Engine IP アドレスを指す A レコードを定義します。
 
 
-
-
-Reference contents:
-? カスタム ドメインのマッピング | App Engine flexible environment for .NET docs | Google Cloud
 
 
 Question 58
@@ -879,31 +868,27 @@ D. Stackdriver Error Reporting
 
 
 
-
-Reference contents:
-? Google Cloud Security Command Center | Google Cloud
-
-
 Question 59
 ソーシャルメディアのアプリケーションを開発しています。
-ユーザーが画像をアップロードできる機能を追加することを計画しています。画像のサイズは 2 MB 〜 1 GBです。この機能のためのインフラ運用のオーバーヘッドを最小限にしたいと考えています。
+ユーザーが画像をアップロードできる機能を追加することを計画しています。画像のサイズは 2 MB 〜 1 GBです。
+この機能のためのインフラ運用のオーバーヘッドを最小限にしたいと考えています。
 どうすればいいでしょうか？
 
 A. 画像を直接受け付けるようにアプリケーションを変更し、他のユーザー情報を保存するデータベースに画像を保存します。
-B. Google Cloud Storage 用の署名付き URL を作成するようにアプリケーションを変更します。これらの署名付き URLをクライアント アプリケーションに転送して Google Cloud Storage に画像をアップロードします。
+B. Google Cloud Storage 用の署名付き URL を作成するようにアプリケーションを変更します。
+  これらの署名付き URLをクライアント アプリケーションに転送して Google Cloud Storage に画像をアップロードします。
 C. ユーザー画像を受け入れるようにGCP 上のWebサーバーを設定し、アップロードされたファイルを保持するファイルストアを作成します。ファイルストアから画像を取得するようにアプリケーションを変更します。
 D. Google Cloud Storage にユーザーごとに別のバケットを作成します。各バケットへの書き込みアクセスを許可するために別のサービスアカウントを割り当てます。ユーザー情報に基づいてサービスアカウントの資格情報をクライアントアプリケーションに転送します。アプリケーションはこのサービスアカウントを使用して Google Cloud Storage に画像をアップロードします。
 
 
 
 
-Reference contents:
-? 署名付き URL を活用して Cloud Storage に画像ファイルを直接アップロードするアーキテクチャを設計する
-
-
 Question 60
 アプリケーションはカスタムマシン イメージとして構築されます。
-マシンイメージの複数の固有のデプロイメントがあり、 各デプロイメントは独自のテンプレートを持つ個別のマネージド インスタンス グループです。 デプロイメントごとに固有の構成値のセットが必要です。 これらの一意の値を各デプロイメントに提供する必要がありますがすべてのデプロイメントで同じカスタムマシン イメージを使用します。 Google Compute Engine のすぐに使える機能を使用したいと考えています。
+マシンイメージの複数の固有のデプロイメントがあり、 各デプロイメントは独自のテンプレートを持つ個別のマネージド インスタンス グループです。 
+デプロイメントごとに固有の構成値のセットが必要です。
+これらの一意の値を各デプロイメントに提供する必要がありますがすべてのデプロイメントで同じカスタムマシン イメージを使用します。
+Google Compute Engine のすぐに使える機能を使用したいと考えています。
 何をするべきかでしょうか？
 
 A. 永続ディスクに固有の構成値を配置します。
@@ -913,9 +898,6 @@ D. インスタンス テンプレートのインスタンス メタデータに
 
 
 
-
-Reference contents:
-? インスタンス グループ | Compute Engine Documentation | Google Cloud
 
 
 Question 61
