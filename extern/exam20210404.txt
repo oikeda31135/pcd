@@ -748,7 +748,8 @@ D. 現在の単一の MySQL インスタンスを Google Cloud SQL に置き換�
 
 Question 51
 アプリケーションは複数の Google Kubernetes Engine クラスタで実行されています。
-各クラスタのデプロイメントによって管理されており、Deployment は各クラスタにPod の複数のレプリカを作成しています。すべてのクラスタにある Deployment 内のすべてのレプリカの標準出力に送信されたログを表示したいと考えています。
+各クラスタのデプロイメントによって管理されており、Deployment は各クラスタにPod の複数のレプリカを作成しています。
+すべてのクラスタにある Deployment 内のすべてのレプリカの標準出力に送信されたログを表示したいと考えています。
 どのコマンドを使用するべきでしょうか？
 
 A. kubectl logs [PARAM]
@@ -759,12 +760,10 @@ D. gcloud compute ssh [PARAM] “”-command= “sudo journalctl”
 
 
 
-Reference contents:
-? Config Sync ログの表示
-
 
 Question 52
-Google Cloud Build を使用して Google Cloud Source Repositories リポジトリへの各ソースコードのコミットに新しい Docker イメージを作成しています。アプリケーションはマスターブランチへのコミットごとに構築されており、マスターブランチへの特定のコミットを自動化された方法でリリースしたいと考えています。
+Google Cloud Build を使用して Google Cloud Source Repositories リポジトリへの各ソースコードのコミットに新しい Docker イメージを作成しています。
+アプリケーションはマスターブランチへのコミットごとに構築されており、マスターブランチへの特定のコミットを自動化された方法でリリースしたいと考えています。
 どうすればよいでしょうか？
 
 A. 新しいリリースのために手動でビルドをトリガーします。
@@ -795,10 +794,6 @@ D. Event_timestamp をキーに設定します。
 
 
 
-Reference contents:
-? スキーマの設計 | Cloud Bigtable ドキュメント
-
-
 Question 54
 Google Compute Engine にデプロイされたアプリケーションのメモリ使用量を表示したいとします。
 何をするべきでしょうか？
@@ -810,11 +805,6 @@ D. Google Cloud Console を使用します。
 
 
 
-
-
-Reference contents:
-? Google Cloud Platform: how to monitor memory usage of VM instances
-? Agent metrics | Cloud Monitoring
 
 
 Question 55
@@ -830,9 +820,6 @@ D. Stackdriver Monitoring を使用してクエリの実行時間をプロット
 
 
 
-Reference contents:
-? Google Cloud metrics #bigquery | Cloud Monitoring
-
 
 Question 56
 Google Cloud Spanner の顧客データベースのスキーマを設計しています。
@@ -846,9 +833,6 @@ D. Customers という名前のテーブルを親テーブルとして作成し�
 
 
 
-
-Reference contents:
-? スキーマとデータモデル #インターリーブされたテーブルの階層の作成 | Cloud Spanner
 
 
 Question 57
@@ -897,25 +881,22 @@ D. Google Cloud Storage にユーザーごとに別のバケットを作成し�
 
 
 
-Reference contents:
-? 署名付き URL を活用して Cloud Storage に画像ファイルを直接アップロードするアーキテクチャを設計する
-
 
 Question 60
 アプリケーションはカスタムマシン イメージとして構築されます。
-マシンイメージの複数の固有のデプロイメントがあり、 各デプロイメントは独自のテンプレートを持つ個別のマネージド インスタンス グループです。 デプロイメントごとに固有の構成値のセットが必要です。 これらの一意の値を各デプロイメントに提供する必要がありますがすべてのデプロイメントで同じカスタムマシン イメージを使用します。 Google Compute Engine のすぐに使える機能を使用したいと考えています。
+マシンイメージの複数の固有のデプロイメントがあり、 各デプロイメントは独自のテンプレートを持つ個別のマネージド インスタンス グループです。
+デプロイメントごとに固有の構成値のセットが必要です。
+これらの一意の値を各デプロイメントに提供する必要がありますがすべてのデプロイメントで同じカスタムマシンイメージを使用します。
+Google Compute Engine のすぐに使える機能を使用したいと考えています。
 何をするべきかでしょうか？
 
 A. 永続ディスクに固有の構成値を配置します。
 B. Google Cloud Bigtable テーブルに固有の構成値を配置します。
 C. インスタンス テンプレートの起動スクリプトに固有の構成値を配置します。
-D. インスタンス テンプレートのインスタンス メタデータに固有の構成値を配置します。
+D. インスタンス テンプレートのインスタンスメタデータに固有の構成値を配置します。
 
 
 
-
-Reference contents:
-? インスタンス グループ | Compute Engine Documentation | Google Cloud
 
 
 Question 61
@@ -933,7 +914,9 @@ D. アプリケーションにロギング コマンドを追加し、Google Sta
 
 Question 62
 Google App Engine でアプリケーションを実行しています。
-このアプリケーションは Stackdriver Trace で計測されています。/product-details リクエストは 以下のように /sku-details にある 4つの既知の一意の製品に関する詳細を報告します。リクエストが完了するまでの時間を短縮したいと考えています。
+このアプリケーションは Stackdriver Trace で計測されています。
+/product-details リクエストは 以下のように /sku-details にある 4つの既知の一意の製品に関する詳細を報告します。
+リクエストが完了するまでの時間を短縮したいと考えています。
 どうすればいいでしょうか？
 
 
@@ -962,9 +945,6 @@ E. Google BigQuery の DML ステートメントを使用してリクエスト�
 
 
 
-Reference contents:
-? データ ウェアハウス使用者のための BigQuery | Solutions | Google Cloud
-
 
 Question 64
 Google App Engine standard 構成は次になります。
@@ -981,13 +961,11 @@ D. basic_scaling: max_instances: 5 idle_timeout: 10m
 
 
 
-Reference contents:
-? app.yaml リファレンス #スケーリングの要素
-
 
 Question 65
 分析システムは Google BigQuery データセットに対してクエリを実行します。
-SQL クエリはバッチで実行され、SQL ファイルの内容を Google BigQuery CLI に渡します。その後、Google BigQuery CLI の出力を別のプロセスにリダイレクトしますがクエリの実行時に Google BigQuery CLI からパーミッションエラーが発生しており、この問題を解決したいと考えています。
+SQL クエリはバッチで実行され、SQL ファイルの内容を Google BigQuery CLI に渡します。
+その後、Google BigQuery CLI の出力を別のプロセスにリダイレクトしますがクエリの実行時に Google BigQuery CLI からパーミッションエラーが発生しており、この問題を解決したいと考えています。
 どうすればよいでしょうか？
 
 A.サービスアカウントに Google BigQuery Data Viewer と Google BigQuery Job User の役割を付与します。
