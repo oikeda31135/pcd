@@ -762,10 +762,15 @@ D. gcloud compute ssh [PARAM] “”-command= “sudo journalctl”
 
 
 Question 52
+<<<<<<< HEAD
 Google Cloud Build を使用して Google Cloud Source Repositories リポジトリへの各ソースコードのコミットに新しい 
 Docker イメージを作成しています。
 アプリケーションはマスターブランチへのコミットごとに構築されており、マスターブランチへの特定のコミットを
 自動化された方法でリリースしたいと考えています。
+=======
+Google Cloud Build を使用して Google Cloud Source Repositories リポジトリへの各ソースコードのコミットに新しい Docker イメージを作成しています。
+アプリケーションはマスターブランチへのコミットごとに構築されており、マスターブランチへの特定のコミットを自動化された方法でリリースしたいと考えています。
+>>>>>>> 7c2a80d1a2b8433a0f3a9c03364e75da41dfd75c
 どうすればよいでしょうか？
 
 A. 新しいリリースのために手動でビルドをトリガーします。
@@ -808,6 +813,10 @@ D. Google Cloud Console を使用します。
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c2a80d1a2b8433a0f3a9c03364e75da41dfd75c
 Question 55
 Google BigQuery API を使用して数分ごとに Google BigQuery で数百のクエリを実行する分析アプリケーションがあります。
 これらのクエリの実行にかかる時間を調べたいと思います。
@@ -838,7 +847,10 @@ D. Customers という名前のテーブルを親テーブルとして作成し�
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c2a80d1a2b8433a0f3a9c03364e75da41dfd75c
 
 Question 57
 Google App Engine に 1つのWebサイトを公開し、URL http://www.altostrat.com でアクセスできるようにする必要があります。
@@ -883,19 +895,19 @@ D. Google Cloud Storage にユーザーごとに別のバケットを作成し�
 
 
 
+
 Question 60
 アプリケーションはカスタムマシン イメージとして構築されます。
-マシンイメージの複数の固有のデプロイメントがあり、 各デプロイメントは独自のテンプレートを持つ個別のマネージド インスタンス グループです。 
+マシンイメージの複数の固有のデプロイメントがあり、 各デプロイメントは独自のテンプレートを持つ個別のマネージド インスタンス グループです。
 デプロイメントごとに固有の構成値のセットが必要です。
-これらの一意の値を各デプロイメントに提供する必要がありますがすべてのデプロイメントで同じカスタムマシン イメージを使用します。
+これらの一意の値を各デプロイメントに提供する必要がありますがすべてのデプロイメントで同じカスタムマシンイメージを使用します。
 Google Compute Engine のすぐに使える機能を使用したいと考えています。
 何をするべきかでしょうか？
 
 A. 永続ディスクに固有の構成値を配置します。
 B. Google Cloud Bigtable テーブルに固有の構成値を配置します。
 C. インスタンス テンプレートの起動スクリプトに固有の構成値を配置します。
-D. インスタンス テンプレートのインスタンス メタデータに固有の構成値を配置します。
-
+D. インスタンス テンプレートのインスタンスメタデータに固有の構成値を配置します。
 
 
 
@@ -915,7 +927,9 @@ D. アプリケーションにロギング コマンドを追加し、Google Sta
 
 Question 62
 Google App Engine でアプリケーションを実行しています。
-このアプリケーションは Stackdriver Trace で計測されています。/product-details リクエストは 以下のように /sku-details にある 4つの既知の一意の製品に関する詳細を報告します。リクエストが完了するまでの時間を短縮したいと考えています。
+このアプリケーションは Stackdriver Trace で計測されています。
+/product-details リクエストは 以下のように /sku-details にある 4つの既知の一意の製品に関する詳細を報告します。
+リクエストが完了するまでの時間を短縮したいと考えています。
 どうすればいいでしょうか？
 
 
@@ -944,9 +958,6 @@ E. Google BigQuery の DML ステートメントを使用してリクエスト�
 
 
 
-Reference contents:
-? データ ウェアハウス使用者のための BigQuery | Solutions | Google Cloud
-
 
 Question 64
 Google App Engine standard 構成は次になります。
@@ -963,13 +974,11 @@ D. basic_scaling: max_instances: 5 idle_timeout: 10m
 
 
 
-Reference contents:
-? app.yaml リファレンス #スケーリングの要素
-
 
 Question 65
 分析システムは Google BigQuery データセットに対してクエリを実行します。
-SQL クエリはバッチで実行され、SQL ファイルの内容を Google BigQuery CLI に渡します。その後、Google BigQuery CLI の出力を別のプロセスにリダイレクトしますがクエリの実行時に Google BigQuery CLI からパーミッションエラーが発生しており、この問題を解決したいと考えています。
+SQL クエリはバッチで実行され、SQL ファイルの内容を Google BigQuery CLI に渡します。
+その後、Google BigQuery CLI の出力を別のプロセスにリダイレクトしますがクエリの実行時に Google BigQuery CLI からパーミッションエラーが発生しており、この問題を解決したいと考えています。
 どうすればよいでしょうか？
 
 A.サービスアカウントに Google BigQuery Data Viewer と Google BigQuery Job User の役割を付与します。
@@ -1274,8 +1283,6 @@ A. ブルー/グリーン（Blue/green）デプロイメント
 B. カナリア（Canary）デプロイメント
 C. ローリング（Rolling）デプロイメント
 D. 再作成（Recreate） デプロイメント
-
-
 
 
 
