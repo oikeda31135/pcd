@@ -762,15 +762,11 @@ D. gcloud compute ssh [PARAM] “”-command= “sudo journalctl”
 
 
 Question 52
-<<<<<<< HEAD
+
 Google Cloud Build を使用して Google Cloud Source Repositories リポジトリへの各ソースコードのコミットに新しい 
 Docker イメージを作成しています。
 アプリケーションはマスターブランチへのコミットごとに構築されており、マスターブランチへの特定のコミットを
 自動化された方法でリリースしたいと考えています。
-=======
-Google Cloud Build を使用して Google Cloud Source Repositories リポジトリへの各ソースコードのコミットに新しい Docker イメージを作成しています。
-アプリケーションはマスターブランチへのコミットごとに構築されており、マスターブランチへの特定のコミットを自動化された方法でリリースしたいと考えています。
->>>>>>> 7c2a80d1a2b8433a0f3a9c03364e75da41dfd75c
 どうすればよいでしょうか？
 
 A. 新しいリリースのために手動でビルドをトリガーします。
@@ -847,10 +843,6 @@ D. Customers という名前のテーブルを親テーブルとして作成し�
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7c2a80d1a2b8433a0f3a9c03364e75da41dfd75c
 
 Question 57
 Google App Engine に 1つのWebサイトを公開し、URL http://www.altostrat.com でアクセスできるようにする必要があります。
@@ -989,9 +981,6 @@ D. Google BigQuery で新しいデータセットを作成し、ソーステー�
 
 
 
-Reference contents:
-? 事前定義ロールと権限 #BigQuery の IAM 事前定義ロール | BigQuery
-
 
 Question 66
 使用しているアプリケーションは Google Compute Engine で実行されており、少数のリクエストに対して持続的な障害を示しています。
@@ -1005,14 +994,10 @@ D. ディスクのスナップショットを作成し、新しいマシンに�
 
 
 
-
-Reference contents:
-? SSH のトラブルシューティング #シリアル コンソールで問題をデバッグする | Compute Engine ドキュメント
-
-
 Question 67
 Google Compute Engine のインスタンス グループが全体の CPU 使用率に応じて自動的にスケーリングされるように設定しました。
-しかし、クラスタがインスタンスの追加を終了する前にアプリケーションのレスポンス レイテンシーが急激に増加します。インスタンス グループ オートスケーラーの構成を変更することでエンドユーザーにより一貫したレイテンシー エクスペリエンスを提供したいと考えています。
+しかし、クラスタがインスタンスの追加を終了する前にアプリケーションのレスポンス レイテンシーが急激に増加します。
+インスタンス グループ オートスケーラーの構成を変更することでエンドユーザーにより一貫したレイテンシーエクスペリエンスを提供したいと考えています。
 どの構成変更を行うべきでしょうか？（回答を 2つ選択してください）
 
 A. インスタンス グループ テンプレートに「AUTOSCALE」というラベルを追加します。
@@ -1024,14 +1009,10 @@ E. インスタンス グループ内の個々のVMのヘルスチェックを�
 
 
 
-Reference contents:
-? インスタンスのグループの自動スケーリング #クールダウン期間 | Compute Engine ドキュメント
-? CPU 使用率に基づくスケーリング | Compute Engine ドキュメント
-
-
 Question 68
 マネージド インスタンス グループ（MIGs）によって管理されているアプリケーションを持っています。
-アプリケーションの新しいバージョンをデプロイするときはコストを最小限に抑え、インスタンス数を増やしてはいけません。各新しいインスタンスが作成されたときに新しいインスタンスが健全な場合にのみデプロイが継続されるようにしたいと考えています。
+アプリケーションの新しいバージョンをデプロイするときはコストを最小限に抑え、インスタンス数を増やしてはいけません。
+各新しいインスタンスが作成されたときに新しいインスタンスが健全な場合にのみデプロイが継続されるようにしたいと考えています。
 何をすべきでしょうか？
 
 A. maxSurge を 1、maxUnavailableを 0 に設定し、rolling-action を実行します。
@@ -1041,9 +1022,6 @@ D. maxHealthy を 0、maxUnhealthyを 1  に設定し、rolling-action を実行
 
 
 
-
-Reference contents:
-? MIG のインスタンスに更新を自動的にロールアウトする | Google Cloud
 
 
 Question 69
@@ -1059,9 +1037,6 @@ D. インスタンスのサービス アカウントの デフォルト認証情
 
 
 
-Reference contents:
-? Google Compute Engine に対する承認リクエスト | Compute Engine ドキュメント | Google Cloud
-
 Question 70
 アプリケーションは Google Kubernetes Engine（GKE）クラスタにデプロイされています。
 このアプリケーションを Cloud Load Balancing HTTP(S) ロードバランサーの後ろで公開したいと考えています。
@@ -1075,19 +1050,21 @@ D.タイプが Load Balancer の GKE サービスリソースを構成します�
 
 
 
-Reference contents:
-? HTTP(S) 負荷分散用 GKE Ingress | Google Cloud
-
 
 Question 71
 会社はオンプレミスの Hadoop 環境をクラウドに移行しようと計画しています。
-HDFS に保存されているデータのストレージ コストの増加とメンテナンスは、貴社にとって大きな懸念事項です。また、既存のデータ分析ジョブや既存のアーキテクチャの変更を最小限に抑えたいと考えています。
+HDFS に保存されているデータのストレージ コストの増加とメンテナンスは、貴社にとって大きな懸念事項です。
+また、既存のデータ分析ジョブや既存のアーキテクチャの変更を最小限に抑えたいと考えています。
 どのように移行を進めるべきでしょうか？
 
-A. Hadoopに保存されているデータをGoogle BigQueryに移行します。ジョブを変更して、オンプレミスのHadoop 環境ではなく、Google BigQueryから情報をソースするようにします。
-B. コストを節約するために SSD ではなく HDD を使用してGoogle Compute Engine インスタンスを作成します。その後、Google Compute Engine インスタンスで既存環境の新しい環境へのフル マイグレーションを実行します。
-C. Google Cloud Platform に Google Cloud Dataproc クラスタを作成し、Hadoop 環境を新しい Google Cloud Dataproc クラスタに移行します。ストレージコストを節約するために HDFS データをより大きな  HDD に移動します。
-D. Google Cloud Platform に Google Cloud Dataproc クラスタを作成し、Hadoop コードオブジェクトを新しいクラスタに移行します。データを Google Cloud Storage に移動し、Google Cloud Dataproc コネクタを活用してそのデータ上でジョブを実行します。
+A. Hadoopに保存されているデータをGoogle BigQueryに移行します。
+   ジョブを変更して、オンプレミスのHadoop 環境ではなく、Google BigQueryから情報をソースするようにします。
+B. コストを節約するために SSD ではなく HDD を使用してGoogle Compute Engine インスタンスを作成します。
+   その後、Google Compute Engine インスタンスで既存環境の新しい環境へのフル マイグレーションを実行します。
+C. Google Cloud Platform に Google Cloud Dataproc クラスタを作成し、Hadoop 環境を新しい Google Cloud Dataproc クラスタに移行します。
+   ストレージコストを節約するために HDFS データをより大きな  HDD に移動します。
+D. Google Cloud Platform に Google Cloud Dataproc クラスタを作成し、Hadoop コードオブジェクトを新しいクラスタに移行します。
+   データを Google Cloud Storage に移動し、Google Cloud Dataproc コネクタを活用してそのデータ上でジョブを実行します。
 
 
 
@@ -1105,10 +1082,6 @@ D. gcloud services test “”o output.json gs://my-bucket
 
 
 
-
-Reference contents:
-? Sometimes get super-slow download rates from Google Cloud Storage, severely impacting workflow
-? perfdiag ? Run performance diagnostic | Cloud Storage
 
 
 Question 73
@@ -1137,9 +1110,6 @@ D. ファイルを受信するために Google Kubernetes Engine クラスタに
 
 
 
-Reference contents:
-? Cloud Storage の Pub/Sub 通知 | Google Cloud
-
 
 Question 75
 チームメイトは Google Cloud Datastore のアカウント残高にクレジットを追加している次のコードを確認するように依頼がありました。
@@ -1160,9 +1130,6 @@ D. 関数からアカウント エンティティを返しません。
 
 
 
-
-Reference contents:
-? トランザクション | Cloud Datastore ドキュメント
 
 
 Question 76
@@ -1195,16 +1162,17 @@ Google Compute Engine で財務部門向けの企業ツールを開発してい�
 このツールではユーザーを認証し、財務部門に所属していることを確認する必要があります。会社の従業員は全員 G Suite を使用しています。
 何をすべきでしょうか？
 
-A. HTTP (s) ロードバランサーで Google Cloud Identity-Aware Proxy を有効にし、財務部門のユーザーを含む Google グループへのアクセスを制限します。提供された JSON Web Token をアプリケーション内で確認します。
-B. HTTP (s) ロードバランサーで Google Cloud Identity-Aware Proxy を有効にし、財務部門のユーザーを含む Google グループへのアクセスを制限する。財務チームの全員にクライアントサイド証明書を発行してアプリケーション内で証明書を検証します。
-C. Google Cloud Armor セキュリティ ポリシーを設定して企業の IP アドレス範囲のみにアクセスを制限します。提供された JSON Web Token をアプリケーション内で確認します。
-D. Google Cloud Armor セキュリティ ポリシーを設定して企業の IP アドレス範囲のみにアクセスを制限します。財務チームの全員にクライアントサイド証明書を発行してアプリケーション内で証明書を検証します。
+A. HTTP (s) ロードバランサーで Google Cloud Identity-Aware Proxy を有効にし、財務部門のユーザーを含む Google グループへのアクセスを制限します。
+   提供された JSON Web Token をアプリケーション内で確認します。
+B. HTTP (s) ロードバランサーで Google Cloud Identity-Aware Proxy を有効にし、財務部門のユーザーを含む Google グループへのアクセスを制限する。
+   財務チームの全員にクライアントサイド証明書を発行してアプリケーション内で証明書を検証します。
+C. Google Cloud Armor セキュリティ ポリシーを設定して企業の IP アドレス範囲のみにアクセスを制限します。
+   提供された JSON Web Token をアプリケーション内で確認します。
+D. Google Cloud Armor セキュリティ ポリシーを設定して企業の IP アドレス範囲のみにアクセスを制限します。
+   財務チームの全員にクライアントサイド証明書を発行してアプリケーション内で証明書を検証します。
 
 
 
-
-Reference contents:
-? ユーザーを認証するための Google ID トークンの使用
 
 
 Question 79
@@ -1219,9 +1187,6 @@ E. スStackdriver Profiler を使用してレポートを生成します。
 
 
 
-
-Reference contents:
-? Cloud Trace と Zipkin の使用
 
 
 Question 80
