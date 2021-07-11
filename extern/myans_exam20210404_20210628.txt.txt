@@ -1,3 +1,4 @@
+https://www.cloudsmog.net/practice-exams/google-cloud-platform/ja_professional-cloud-developer_20210404/
 1.A
 2.B
 3.A
@@ -78,4 +79,7 @@
 78.A
 79.A, C
 80.B(× C)
-
+81.C
+82.B(× D)
+83.A
+84.A
