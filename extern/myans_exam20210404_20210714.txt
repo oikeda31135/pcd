@@ -59,3 +59,27 @@ https://www.cloudsmog.net/practice-exams/google-cloud-platform/ja_professional-c
 58.C
 59.B
 60.D
+61.C
+62.C
+63.B,E(×:C, E)
+64.C(×:D)
+65.A
+66.B
+67.B,D
+68.B
+69.A
+70.C(×:A)
+71.D
+72.B
+73.D
+74.A
+75.B
+76.A
+77.D(×：B)
+78.A
+79.A,C
+80.C
+81.C
+82.D
+83.A
+84.A

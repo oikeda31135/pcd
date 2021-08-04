@@ -28,7 +28,8 @@ D. 一部のトラフィックを古いプラットフォームに移行し、2�
 
 Question 3
 MySQL データベースを Google Cloud Platfrom の Google Cloud SQL データベースに移行しようとしています。
-この Google Cloud SQL インスタンスに接続する Google Compute Engine 仮想マシン インスタンスがあります。Google Cloud SQL にアクセスできるようにするために Google Compute Engine インスタンス IP をホワイトリストに登録したくありません。
+この Google Cloud SQL インスタンスに接続する Google Compute Engine 仮想マシン インスタンスがあります。
+Google Cloud SQL にアクセスできるようにするために Google Compute Engine インスタンス IP をホワイトリストに登録したくありません。
 どうすればよいでしょうか？
 
 A. Google Cloud SQL インスタンスのプライベート IP を有効にします。
@@ -932,9 +933,10 @@ D. sku-details 情報をデータベースに保存してWebサービスの呼�
 
 Question 63
 会社では Google BigQuery でお客様のアプリケーション情報を保持するデータウェアハウスを持っています。
-Google BigQuery のデータウェア ハウスには 2 PB のユーザーデータが保存されています。最近、会社はユーザーベースをEU ユーザーに拡大したため、次の要件に準拠する必要があります。
-? ユーザーの要求に応じてすべてのユーザーアカウント情報を削除することができなければならない。
-? すべてのEU ユーザーデータはEU ユーザー専用の単一地域に保存されなければならない。
+Google BigQuery のデータウェア ハウスには 2 PB のユーザーデータが保存されています。
+最近、会社はユーザーベースをEU ユーザーに拡大したため、次の要件に準拠する必要があります。
+・ユーザーの要求に応じてすべてのユーザーアカウント情報を削除することができなければならない。
+・すべてのEU ユーザーデータはEU ユーザー専用の単一地域に保存されなければならない。
 どのアクションを取るべきでしょうか？（回答を 2つ選択してください）
 
 A. Google BigQuery のフェデレーション クエリを使用して Google Cloud Storage からデータを照会します。
@@ -950,8 +952,8 @@ E. Google BigQuery の DML ステートメントを使用してリクエスト�
 
 Question 64
 Google App Engine standard 構成は次になります。
-? service: production
-? instance_class: B1
+・ service: production
+・ instance_class: B1
 アプリケーションを 5つのインスタンスに制限したいとします。
 どのコードスニペットを設定に含めるべきでしょうか？
 
@@ -1180,7 +1182,7 @@ A. Zipkin コレクターを使ってデータを収集します。
 B. Fluentd エージェントを使用してデータを収集します。
 C. Stackdriver Trace を使用してレポートを生成します。
 D. Stackdriver Debugger を使用してレポートを生成します。
-E. スStackdriver Profiler を使用してレポートを生成します。
+E. Stackdriver Profiler を使用してレポートを生成します。
 
 
 
